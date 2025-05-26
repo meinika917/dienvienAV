@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Tina Yuzuki (Rio)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      /* Áp dụng màu sắc từ trang web mẫu */
+    .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+    .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+    .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+    .border-pink-accent { border-color: #db2777; }
+    .hover\:border-pink-accent:hover { border-color: #db2777; }
+    .hover\:bg-pink-main:hover { background-color: #f472b6; }
+    .hover\:text-pink-main:hover { color: #f472b6; }
+
+    .transition:hover{
+        color:yellow;
+    }
+</style>
+</head>
+<body class="bg-pink-light font-sans">
+  <!-- Header -->
+  <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+          <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+          <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+          <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <h1 class="text-3xl font-bold text-center text-pink-600 mb-6 border-b-2 border-pink-600 pb-2">Chi Tiết Diễn Viên</h1>
+<div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+  <a href="tsumugi.html"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFRUXGBoXFxcYFRgXGBYYFRgXFhcYGBgYHSggGBolHRoXITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0dICUtLSsrLS0tLS0tLS0tLS0tLS0tLS0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLSstLS0tNf/AABEIARMAtwMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xAA9EAABAgMFBQYFAgYBBQEAAAABAAIDESEEBRIxQQZRYXGBIpGhscHwBxMy0eFS8RQjQmJygqIVkrLS4sL/xAAaAQADAQEBAQAAAAAAAAAAAAABAgMABAUG/8QAJREBAQACAgICAgIDAQAAAAAAAAECEQMxEiEEQRNRBSIyM0IV/9oADAMBAAIRAxEAPwDUEaJGiUaCCCzCKCNcrM6Dl016SJRErMyL4pWx0W3fLEyGNZDa0Vm5wDzIbyXAdArrsR8PoUBgi2pjYkYyOFwm2HrIDV3HuSN3XCTeca1PHYZLBnMvcxvaHACY6qY2h2g+U0nFIDd7qlmPvdenz/Ks48eLjupqbT9pvKHDEpgcKKBt+1MMUmPTvyWXXltFGiOMjIT8OJOfJQcaKSaumUPye/Ti8NdtZtW3tnaKxAXbmhx8hRRrPiGyZIhOO4kgDNZobK8D5jstBvlnTckHWsa056IW0JI0N/xCjF08DJbsX4T2y/EKvahTHB1fJZW+M3i48vsu4Ec/pl/sfukvkfWLero2os8f6Xyd+k0Pdr0U01wNQV55gWqoIJBGRH7rU9jNqWPZhjxGNeJAEkAP/wDpNjlvsmWOul1mgiY6YmKz6owmINBBGFmGgggsxsjRBGnKCNEgsw0RQRLMIhJvCUK5eVmRNvtZZiHvJZTtferokTC3+nPdPhy9VafiDf3y+zDPaIkTu/MpLM4BMRxmZAVPvUlJnfpXCfYyJZuLjrXsjmfsk4cSZkKJ5b4YDQG5Z9/vyTBrDiU4exLxrWSA2eQz3H35ppBaCZOHp3JOG0z97k8MAuGIZjPiEbQmLmLdbpYmGY517lGvs7gag+Kn7vtpbUciM1L2iC17Q7CCCK0yPRDyHxUpj5ckItqoJJzetiLXZU6qNcDqPYTSBa0L4Y3/ABWWhkEuJhRDhwmoa6RLSNxmJdVsQKwr4bSdaobDIfzA8E5zhgkAc1uc0YTJ2ulwCugiV2giCCzG6NEgnKNBEgsw0SCJZhJG0vkD7ySyjb4iSYeNFhYbfkd0SNEBMyXknnMpCBDDOyOZ4lObezBEiT+oPeDyDpN+6bWdtR3n0XPa6JDuNCLpePM5++CXsF3YiOKcQoWXuvuamrts8sPvUJLVJiiol3fVwAPSUk3gMwnp4a/dWqywJvI4HzKg7ZBwRCNx8vxLxS7NoxttkwOxDI+/unFnjYWzE5GpHqPfknEQTZL9OX+JyTKwO+puoqBv91RlLYWiWppb7rn3b/3UdaxDewyADhQy1B1Ca26bTiH0nwlmCo98QtJlkf3CtEakrjiOhua4ULSHA7i0rfLttoiw2RBk4T5HIjoZhefYD5yO8e/Va18OrWXQS06GY7hP0Wl/s2U/quc10Ck2ldgqiRUFBchBZiKNEjTFBBBGswkEaElmcuChb4jNBJeZMY0ud3fspp5WV/EK/pQ3Q2n6zXiBUDlOXsJcrqGxm6pl62rG8uyxEu4yBIHVHd7J1316KLjP7UuAH3UhAtrWz35D09e9c9dOKwWf1/8AH2VYbEzwkqpZbQMTQDMBteeZVoskT0HckVPLDL5w/wBvMeiZbUWORxgc/ff3BNHXm2HGmZ5Oy6D0Tu2XwYzcIhEzHvrqj9AgXP7M92fI5dxUdDtGCM06HPof3RWqJEgu7bOyfI++ijLVaZy4HSvuhQkC1M7RXe+ESc2OrMV6+96rROhyWmXc5tpsjQcwMJ5t/Eu9Z3b4GB7mSnI0+yrhdpZTTmwRc25yqOXufetM+HFpk5w3jzzWbXFdD43zYocGNhCuL+okfSN2leSuHw/tP82W8Hwqtf8AJv8AlsLHTSgUVZY2SkYURWQOGoINRLMSQQQTFGjCJGsw0YQCJxosyI2kt3y4RE5F1J7h/Ue5YFfd4/PjzH0NMmjgNetT1V7+Jl9zcYTM8jXIDMdT4BZlEdh6+qlfdWxmoXs7S99M5E+CcQniRdgL2toTKgJMupQ2QgOjWn5Y/Q4n/iD5q3xdnZQXQJUcZzGYIIIMpV7wlup2pju9ICww5klgllMd/grjdsBxYaJjcmynyiXYi4yIqJCszKU95mr3dN3hsITzSXX0pN/agx4OGKHHINcT3j7lR94XzHhYHANY188MwS7C2UyR1EtVoN5XIHgkDp4qFtNyCIA2IwuDTMAk0OVDmhNTsbNz0r9ivaJFbONDD2Yi3E0EgkSM5ZyrnLnJd2vZdkVpdCod2iuF23G0AANDQMgAB5BS38EGjJa/uNr1qs52PiOZEMFxlMeLfx5JG+bsDoxBpnM5zUptZYDCiNjsGoJHEfcLsObFeHt+lzQeIM/NCULir0eHDw/LbMBumjnfqO8rvZOKWWlg3O86eqmbZYWk9kSwzmeWXXgoC6nE2psv1CXe1NKGU9NjspopCC5RtlyUhCKu5D6G5BcQygiwIwiRhMUa6XIXSzAFDbTXsIEIuzdk0cePBSVstIY0k6V7llG1N8GK87sh9gEmWWjYY7Vu8HBzi5xxE5k6niq7bzUnTT79Spa0OmSO/wA/z0Ciryf/AEgVpPmTQefglilT/wAKpC1PJzMIgf8AeyfotZ/hg6qxXZS2CBaoM8nTYT/kKf8ALCtps1oBCTOe1uLrQ3MAkFKubJgULGjAPaXGQn4qStVvY4AAiclPZr2WgvC6dZ2mqjnkNIkZpxCtKMptHEgE2tEWa6fHTWK5Cj0jL5hh7CCq5ddlwRCwE4XAkb27wOOo/CstrOZKyq9b/jC1GJBNGEtFJg/qmOfktjjaTLKRo94GDAs7nuo1rSRvJ9SSqNsmwvjMcc54j1r6KJvK9rRaQBFdQZNaJNnvzqrRsXB/mT3CSfx8S5Z+XTTbKpGEoyxqUgBWcp3DQQYEEWBGESMJijRRIgaCTRAlV++r0AGfLjuJ4IW6GTaM2pvMua4CjQO/cPVZtb48q56AcVNX3eYMwDM5E+fVVS0R5+n39+qhvdXk1BF0qbqnn+9OiiWDES45J5GiSZz9j3ySEbswwNczxn+PNOCNcSXTGc5jgdFq+zd8l8NrjqK8xQ+Ky5kNXy47EYFnhucZOiFzi3c0yDeWQP8Astn02F1VttIEZpb7BTWDd76NiHE3cRNMYr4jGuiQiAaTBqOYRQb7tWHCWNdWjhhpyrNR068MLl0tNku8QxSctx05IokXCeCr5v61jMN3Vw//AJdNOGQ48WT3uwgf0tFHDWc690kLBywuPafZFmjTCC+Ugl32iQQT2hdsrx+VAeQe0ey3/I08M+iy5gkpzbS8/mxQ0Hst8ZqIY1Wx9RHL3RwhNwHVXfZMSI4/eap9hZU93d+Zq4XKZEH9JE+RoffBLe2+mgWQqVgqKsZoOKlIKtED1iCENEiw0EE0t8bC01lPXdxTFRe0d+MgtlPgeJ3D158VmV4346ISZyHPIepUdtRfZjRnGcmgyaNZaT4y8ZqLs7i4ymGgVJJADRv4lQyu3RjjqH9pJIOeXhqo6JCmRulMn0UnEtrAwsYMUxJz3a8goi2WsAYR3ff8IQSUV8yDpWXGWvD9kUdk+/8AHokHxa8TTkE8G9MU82eusRYwDvob2nbpDIdcu9T99W2r3mgYKDeTRjfz1ULd4iAEtmBmdxl5pteNpc6TSczjdxOk0OzaWnZi8BFZgce0BJw3z1Uo25HD6TQrOrHansiBzPqn3zzBWi3dfRwgu3JKphlZ0f2G6MNTVSb20ko3/rI3ptab4n9IS01yt7PIzw3VQl7Xj2TKg371y+I59XGm5Qd9xqEBaEqtxXzeSda96UhnwSAzSoNJKlKk7rbkTzVj2ddNzgf6gfH2FA2QSpwPqnt32gteCM55b5nLxS3tvpp90PmwA5inopuAqvcdpBIkaEAg7wRT3xVps4VsekLPZ3DCC6YgmAnNRe0DJwiNDQ8iJFSRKh79tsmljamVdTLhxRyskDGW308/3xiEeKJzk9/ayB7RqkIEM8/JWPbCwMhvxj+ok4SSZcVBwYvL7KMu4vZ7dPcQM5cvRMYgkplsZnElMrVBE9J+Kwo9gPfkpe74BiOazUyn6qPbCrlM6aq9bN3UYQDnD+YRka4J6ncdw59dlWxh1brOyFZnbw0Brd2QLju+81SnnEefkFZ9rY2CGGf1OMzWpDaz8lG7M2H5ji530tE+9JcjzEjdVgxRASKCverUyz9kUTq7rmOEPAliOSlxd9MkluzICFAS38MpI2SSAhIAi4rAAqltBFVyvEBoJMqBUC84uJ53TkOuSbEKaw2oBmQTizMmSPdQlWQZ01Cf7A6s+fT7hKQZnLPMe+g70jAp76peHQz0p4/ulrLdsza5hh3HD0NR3Gq0aymYCzDZdlBPV8v+Lp+a0u6jNjZ7h5KnGlmkmBBdMCComj7TGwt4mg5qBLak6kzrz88k/Lsbp6aDgm9qZQH3IqOeW6vx4+MZL8QYk44boATynp4FVIO9+/dVaNrz820RP7XYO7PxJUEbJUc02PTZdu7DDrLvKcWyI1tKT3DM8/yuofY03T701FmmSZYp+9Vr77aLbs/ZIXy2RGCbyKuIHZOrRxVis4DQXE0AJJ04kuKrF0Rnw4YaGtJmTMmTRP3wC5tVuxnDE+ZHrP5bMLYc9KNmXdZqVvtST0Y3/GMcujkSZPDD0mAaulx95KZ2bs5bBNM6nqZAefRNH2S0Wp7QYfyobcgfUZ9KK3WOwhjGMH6m8zIjNajFpsEEANadG+/VKxLOF1ZmSThwC2g2hbVC4KOiODRUSVhjRWNBc6gGpWd7VbSNiEshUGRI14BBkdtHemI4GZanefsq4IczXSvMn34JaIdSfwkmVlz8TTwCpPRKQD8L58ap646j37omkZs5lcwI1JbsuXuaNgSpBjxOe/PmPfgn8CzYpNzmacdRPhvUNBdMy6hW24oRIBymc9eiSmTVzWcAhuYkQD/cZYu4Zf5EaK9XdkBu/dVyz2QYaDKo4Yc+pVju4zHGnvxVMfSWXtKsQRQDRGqJoOGJSSNuHZTkKIvy3YAT0XO62VXkBiinUPM+8zUP/EgGWmnmFZrJY8doih1GvbjxaYf6y2dDnKaqN4ubicGfSDIHfKdeSbGFyp3anmgGTs+IzkpJtm+XB+YTKcg0c8yekyo+xyLQT/SPHIeanL1s7okOYB+Uyu7GZHwn6rUId3Hd+LCXzINQPxvVugWIASDQ0bh6lc3ZZAQHAUIEuSloUE6qahrCsg3JRkGcVgGhn7709lIT0CSsFXYzrl796LMlgZBRG0O0EKzMxPNdAMz0Sl83mIMNzzOg01JoAO8LEtorxiR4rnv3yDZzlLRNJsiSv7a2LaTIdlm4Hz3n3JRcONLM1UWZiiIPM03iHkk3Rprk2ishomLnFHBFQjptpSG2bepPomP0u6J2+JJshmfABNLSwg5VPl6IzoKcWc1Elol0wAGCp7umSrOzFyOc4PcKCoB8Cr9AsIAm7QZ5SUsjxJ2J4LJ65HmaKZszZASzryz1VesUAiRBNKz3n7KxWJ4MhkZd6fHJPPHSRhH8hBJudIT9nggq7SQdqtGETVEvO+GfNnGq1tQ2kiZymZ56yVivu1YWkjORWSWx7nPLnu1UI7+Piue1iv68n2sgsaQ0CTQNdO1LThlzUDaLubBbic5rnH6RKYnw/VLfKQ3zol4EeQDWmpkBM6mgVuubZAn+bGOJ2k6y7/YTzdqGcmKgGG9jJuBm4zrw3ra7ssDLRY2BzR2mA0pQgVpzWbbUwsUVrIbZzkGDMkD6XS0xku/1AK1/ZuzCDZobXEDAwNJJkKAD0T4z2nl0q+zcUtx2V9IkIyH9zD9JA7u9WIM9y9FDXrYi+0tiwgcQJLgJk4C1rQHSyJIBANZT4qSEXfTzUcsfGq43cdvhB2eQ00QaJFGwzXINZJTIPagEwny0wkf6uDj4DwCy612TtkdO5bHb4EwVnN/WL5b6Ze/TyRlBUhZDiM+alrFck2YuJCJtZd32Vs2ehAkNOQOLpn5zCfdIpF6WLA/BqJjuMvOaYEYXd3krXtTClHJ4+YafOagrbZ5gEaeSLBYamcpnSlJ6U1U9cuzj4r8b/pnM/wBx3ck82OupjjN2lJLSrPZWtAkBkp3I0iKsdjDAGth99J+ClIV34qvlvwgU67zzS7GVTiEVhcfw8slyZtqMwncQUTOM5BkpZnYpFBNrtf2OqCvL6c+U1WcbTWyhAOk+5UC1BWS3O+Y+IZ0Aw9aE+irtpzI3USa9PoviceuL39kWwJ1nLitEsN6Wq1wxDhNAaAGveRQkCpM8554ajeCs4xEZK6fC69Ay0GA80iibf826dR5BHHvTl+Zw243L9Lps/sq2G/5jiYkQ1c91TM7tyujLI2QmMveea6s8EBO8K6ccZHiXK03g2VooAAl3WNjhUA9EF016awNmD7nZPKXIpH/pDR9JPVS4KNzUl48f0bzy/aux7vPNUjbK6/5ZIFR4+6LVHNULtBZGuhuxDQme6manlwz6PjyX7eeHRCJ8/Iq57MR8Up69gjX9QPfTqou+bhcPlECWM4jphD6gHjIhWm47jmGOAINDu0mRxll0U8Zdnys0rG2jZPnw60n+FAQrQJyVo2/hdoADL1VDESRnyTWe6EvqNB2MtA+aW/2g9y0SFGmKLJdk3Ti0/T4TWq3e2ihe1fo9hsmnTUnDalCEQFEdRMYzk4jPko60PWrRI3Y+negk7LSiJVnSOXbFDaobZs+ZMuJLpCcydNwGS7tdjMiZToDzQg2NsqAEihyzT9r5iRl+PRZ9VhjcZqqy9tUtd1qMKKyK3Njg4ccJnLqrnsdsV/Fvc6LibBaZCVC92oBl9I149VZL++FMHATZnPY8A4WuOJhO4kiYHGqMwvbi5fl8OOf48qu1yXo2PBZFbk9odI5idU/dHCwiFfltu0Osz2lsp4S6dJ0mwmhGqbO2xt4kf4gkf4s/9VT8knbz/wDzssrbjZr6egBGG9ARFg0L4gW0ZvY7nDb6SUhY/ifaWntw4bxwxN9Sj+WFv8byzrVbcx6UEispsPxVhmkSE9u8tIcPGSuVybV2a00hRWl36D2X/wDa6RPRNM5XPyfF5sJu4rFEYfyo632bGMDh2Tnx6qSgxwUb4QNQjUFVvK5RElT8Z151PencC72tHKvP3MqY+TL7bklEhd3uiXQ72yX4hQ6hoGhJO7OvksrjfUZb1uPxFsrTDJGcqACvBZbcdwujxMjhBrxUcvWVVxm4nth7A76yM5AdNfe5ajYYVAo247o+W0UU80SCko6YET3IYk1jvQE3tMRNIQm7khaIiUszUcZulyuofWcII4AQVUWGwnYagyr3gLqJazKe+khpLNMTEpJG0FyXb63f6bxsIWts0ENr2Aeru0fEq1vihYt8P9qWwR/DxXhtZscaAgzJaToZ5c1owvilK0810Y3cfL/J4ssOXKX9of4l2OHFssQkDEwF7TSYLaiXPLqsRDyOW5aN8QNp2FhgscHPcZGRngANZyyNJAKiuAi5Uf8A+X5UuTt6v8djlOO7NOSJE5pBINCiBU3dt0ja4hcgroLDFy2a+Idps8mxP58MUk89sD+1+ffPotb2c2rs9rbOE+o+pjqPZzGo4iYXnOSVslsfCe18NxY9pmHNMiD70T452OP5Hw+Pl9z1XqRzwU3eNFnuxPxBEctg2iTYuQcKNif+ruGR03K9R7W0MnOir5SvE5eDPiy8cohNoIIitMLImhI0Gp5ri7bqhwgGtaAAnMEE9p2Zz+wTgBc+eW6pjNQAFy4o3FIRHJDBFeo+PFXcaImMV61FyKlP4LUzs7U/hBVxnpDK7p5Z2oJSCKIk5HnZxXcEynXT8hXb4ebFNtQMaPi+XOTGg4ccsyTnLSnFaHb9gbGYOBsBgG8UdzxZzSzjtm3u8n8hx8efj2wWMZ56pIx4gGERHhu4PdLunJTm0ez0SyPOOrCSIbpiutRoVCSml6dFmPLjMp7JNalg73uXJbJczQHGeJ1GjYgMWYEp+U02KEkoxkwsa3ZMFdTRPZLiFysG9FA5EVyUazbGDLmtc2LvWNaYLXRR9NA79eGmL3qCsxuS63WmKIYyzcdzfucgtquuythsaxokAJAbgFrdOD5mcusUiwpTEkWuQL0m3C7c5NI70IsRM4sVBnMaImzalcvfNLQGJ8Md0meWocQmp7Aam7Gp7BarIHMII13DCJEEbsA0NsNnnn8tp7xOYKtTjMLLPh3tUwwGQHkNfDAYBTtgZEDM0kOat16bQNhwy5zg1oGZMpJ8bNK82GU5LL+1J+L8dohw2jMxKcsLp++KzKG9S+19+/xcbEPoZRvGf1HyA5KEKhnd17fw8LhxzbqJnnNG5qTmg10kro37GAUbXa1T2z/KeQDNp50/dIWmzYcidx3dFh163BY8Qkh/DTlKvGq4wEBPLLGm2Q7J35ohLu+yTIJGmevvJPbPYcUmtq4mi5bEIABZNxMhIb8v3V12XuXB23/WfAbgtfUT5+fHjmp2k9lrkbAYBm41cd5+wVmYkLOyQS6lt5GVtu66nJJvejc9No0RYrmM9Mor0cWLokW1Rk2FuncJqfQmJGExOmtXRJqOe3ZWEE9hNTeE1PIbUSl4aCNiCzPM5XMS0Pf9b3OllicXS7yggox9HySbgMCNBBBSdDXKCCwuoeY96LpkUzzQQRhcunUN1eicYRLLREgibHpObItDohLq4QJcJkzWkWQUQQSZ9vL+R/sp+1KTQQSOchFcmMYoIIsaEpeCjQVeNDkPIQSzBVBBVTPISds9+KCCwF2IIILM/9k=" alt="Akari Tsumugi" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+    <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Akari Tsumugi</h4></a>
+    <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 31/03/1998</p>
+    <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
+    <ul class="list-disc list-inside text-gray-700 mb-4">
+        <li>Giải Người thuyết trình đặc biệt - Takei Sō tại DMM.R18 Adult Awards, 5/2018.</li>
+        <li>Nhóm Iberto Girl thứ 4 cùng Fukada Eimi và Takahashi Shōko, 7/2020.</li>
+        <li>Xếp thứ 3 hạng mục mạng xã hội, bảng FLASH 2020 BEST100 diễn viên gợi cảm, 12/2020.</li>
+        <li>Xếp thứ 31 trong Bảng xếp hạng FLASH 2021 diễn viên nữ gợi cảm, 8/2021.</li>
+    </ul>
+    <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+    <p class="text-gray-700 mb-4">
+        Akari Tsumugi, sinh tại Kanagawa, Nhật Bản, bắt đầu sự nghiệp phim người lớn năm 2017 với Idea Pocket, sau đó chuyển sang Attackers (2018) và trở lại Idea Pocket (2019). Cô là fan của AKB48, đặc biệt hâm mộ Kojima Haruna, và yêu thích K-pop, có khả năng hiểu một chút tiếng Hàn. Sở thích của cô bao gồm lướt mạng, tìm hiểu về thần tượng, và thưởng thức bột năng (đã ghé hơn 40 cửa hàng). Lần đầu quan hệ của cô là năm 17 tuổi với một nhân viên bán thời gian. Cô được khen ngợi về tính cách vui tính và diễn xuất đa dạng, phân chia vai dâm dục cho Idea Pocket và vai tục tĩu cho Attackers.
+    </p>
+    <p class="text-gray-600 mb-2"><strong>Danh sách sản phẩm nổi bật:</strong></p>
+    <ul class="list-disc list-inside text-gray-700">
+        <a href="https://vnshare.cc/g8552804703"><li>PRED-771</li></a>
+        <a href="https://vnshare.cc/g8552804703"><li>IPZZ-547</li></a>
+        <a href="https://vnshare.cc/g8552804703"><li>JUQ-907</li></a>
+        <a href="https://vnshare.cc/g8552804703"><li>IPZZ-503</li></a>
+        <a href="https://vnshare.cc/g8552804703"><li>IPZZ-451</li></a>
+        <a href="https://vn.javtiful.com/actress/akari-tsumugi"><li>Xem thêm</li></a>
+    </ul>
+</div>
+            <p class="text-gray-700 mt-2">ページは自動的にリダイレクトされます。 <span id="countdown">3</span></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for auto-redirect -->
+    <script>
+        // Đếm ngược và chuyển hướng
+        let countdown = 3;
+        const countdownElement = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown <= 0) {
+                clearInterval(interval);
+                window.location.href = 'https://vnshare.cc/g8552804703';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+
