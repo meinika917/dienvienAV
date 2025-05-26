@@ -7,155 +7,37 @@
     <link rel="icon" type="image/x-icon" href="LOGO.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css.css">
     <style>
-        /* Reset some default styles for better consistency */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+       /* Áp dụng màu sắc từ trang web mẫu */
+    .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+    .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+    .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+    .border-pink-accent { border-color: #db2777; }
+    .hover\:border-pink-accent:hover { border-color: #db2777; }
+    .hover\:bg-pink-main:hover { background-color: #f472b6; }
+    .hover\:text-pink-main:hover { color: #f472b6; }
 
-        /* Ensure body takes full width */
-        body {
-            width: 100%;
-            min-height: 100vh;
-        }
-
-        /* Header styles */
-        header {
-            width: 100%;
-            position: relative;
-        }
-
-        /* Toggle menu styles */
-        .toggle-btn {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #fff;
-            padding: 0.5rem;
-        }
-
-        /* Ensure container doesn't overflow */
-        .container {
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-
-        /* Actor grid adjustments */
-        .grid {
-            display: grid;
-            gap: 1.5rem;
-            width: 100%;
-        }
-
-        /* Responsive design */
-        @media (max-width: 1024px) {
-            .grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            }
-        }
-
-        @media (max-width: 768px) {
-            .toggle-btn {
-                display: block;
-            }
-            .nav-menu {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0; /* Đảm bảo menu bắt đầu từ mép trái */
-                background-color: #ec4899; /* Matching bg-pink-500 */
-                padding: 1rem;
-                z-index: 40;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng để phân biệt */
-            }
-            .nav-menu.active {
-                display: flex;
-            }
-            .nav-menu ul {
-                flex-direction: column;
-                align-items: flex-start; /* Căn trái các mục menu */
-                gap: 1rem;
-                width: 100%;
-                padding-left: 0; /* Xóa padding trái mặc định */
-            }
-            .nav-menu .flex.items-center {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-                width: 100%;
-            }
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .nav-menu {
-                display: flex !important; /* Ensure menu is always visible on larger screens */
-            }
-            .toggle-btn {
-                display: none !important; /* Hide toggle button on larger screens */
-            }
-        }
-
-        /* Ensure images don't overflow */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Contact section adjustments */
-        .contact-image {
-            max-width: 100%;
-            height: auto;
-        }
+    .transition:hover{
+        color:yellow;
+    }
     </style>
 </head>
-<body class="bg-pink-400 font-sans">
-    <!-- Header -->
-    <header class="bg-pink-500 text-white p-4 sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#"><h1 class="text-2xl font-bold">Diễn Viên AV Nhật Bản</h1></a>
-            <div class="flex items-center">
-                <nav class="nav-menu">
-                    <ul class="flex space-x-6">
-                        <li><a href="#" class="p-1 rounded">Trang chủ</a></li>
-                        <li><a href="dienvien.html" class="p-1 rounded">Diễn viên</a></li>
-                        <li><a href="gioithieu.html" class="p-1 rounded">Giới thiệu</a></li>
-                        <li><a href="#contact" class="p-1 rounded">Liên hệ</a></li>
-                    </ul>
-                    <div class="flex items-center space-x-4">
-                        <i class="fas fa-search cursor-pointer p-1 rounded"></i>
-                        <i class="fas fa-user cursor-pointer p-1 rounded"></i>
-                    </div>
-                </nav>
-                <div class="toggle-btn" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- JavaScript for toggle -->
-    <script>
-        function toggleMenu() {
-            const navMenu = document.querySelector('.nav-menu');
-            navMenu.classList.toggle('active');
-        }
-
-        // Reset menu state on window resize
-        window.addEventListener('resize', () => {
-            const navMenu = document.querySelector('.nav-menu');
-            if (window.innerWidth > 768) {
-                navMenu.classList.remove('active');
-            }
-        });
-    </script>
+<body class="bg-pink-light font-sans">
+  <!-- Header -->
+  <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Diễn Viên</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+          <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+          <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+          <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+               
 
     <!-- Introduction Section -->
     <section id="about" class="container mx-auto my-8 px-4">
