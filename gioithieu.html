@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới Thiệu - Công Ty Của Sự Sáng Tạo</title>
+  <link rel="icon" type="image/x-icon" href="LOGO.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .bg-pink-main { background-color: #f472b6; } 
+    .bg-pink-light { background-color: #f9a8d4; } 
+    .text-pink-accent { color: #c026d3; } 
+    .hover\:bg-pink-main:hover { background-color: #f472b6; }
+    .hover\:text-pink-main:hover { color: #f472b6; }
+
+    .transition:hover{
+        color:yellow;
+    }
+  </style>
+</head>
+<body class="bg-pink-light font-sans">
+  <!-- Header -->
+  <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Công Ty Của Sự Sáng Tạo</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+          <li><a href="#" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+          <li><a href="#services" class="p-1 rounded hover:text-pink-light transition">Dịch vụ</a></li>
+          <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="container mx-auto py-16 px-4 text-center">
+    <h2 class="text-4xl font-bold text-pink-accent mb-4">Chào Mừng Đến Với Công Ty Của Sự Sáng Tạo</h2>
+    <p class="text-lg text-gray-700 mb-6">Chúng tôi mang đến những giải pháp sáng tạo và hiệu quả cho mọi nhu cầu của bạn.</p>
+    <a href="#contact" class="inline-block bg-pink-main text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">Liên Hệ Ngay</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container mx-auto py-12 px-4">
+    <h2 class="text-3xl font-semibold text-center text-pink-accent mb-8 border-b-2 border-pink-accent pb-2">Về Chúng Tôi</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV1ux9unkBDiyWfWXZ8tZnTqCVs-Uzn0bDvg&s" alt="Về chúng tôi" class="rounded-lg shadow-md">
+      </div>
+      <div class="md:w-1/2">
+        <p class="text-gray-700 leading-relaxed">
+          Công Ty Của Sự Sáng Tạo được thành lập vào năm 2020, với sứ mệnh mang lại những ý tưởng đột phá và giải pháp tối ưu cho khách hàng. Chúng tôi tự hào là đội ngũ chuyên nghiệp, đam mê và luôn đặt khách hàng làm trung tâm trong mọi hoạt động.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="container mx-auto py-12 px-4 bg-white">
+    <h2 class="text-3xl font-semibold text-center text-pink-accent mb-8 border-b-2 border-pink-accent pb-2">Dịch Vụ Của Chúng Tôi</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-pink-light p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-pink-accent mb-2">Thiết Kế Website</h3>
+        <p class="text-gray-700">Tạo ra những website chuyên nghiệp, responsive và tối ưu hóa trải nghiệm người dùng.</p>
+      </div>
+      <div class="bg-pink-light p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-pink-accent mb-2">Phát Triển Ứng Dụng</h3>
+        <p class="text-gray-700">Phát triển ứng dụng di động và web theo yêu cầu với công nghệ tiên tiến nhất.</p>
+      </div>
+      <div class="bg-pink-light p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-pink-accent mb-2">Tư Vấn Giải Pháp</h3>
+        <p class="text-gray-700">Cung cấp các giải pháp công nghệ phù hợp để tối ưu hóa hiệu suất doanh nghiệp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container mx-auto py-12 px-4 bg-white">
+    <h2 class="text-3xl font-semibold text-center text-pink-accent mb-8 border-b-2 border-pink-accent pb-2">Liên Hệ Với Chúng Tôi</h2>
+    <div class="flex flex-col md:flex-row gap-8">
+      <div class="md:w-1/2">
+        <p class="text-gray-700 mb-4">Hãy để lại thông tin, chúng tôi sẽ liên hệ với bạn sớm nhất!</p>
+        <div class="space-y-4">
+          <input type="text" placeholder="Họ và tên" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-main">
+          <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-main">
+          <textarea placeholder="Nội dung" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-main" rows="4"></textarea>
+          <button class="bg-pink-main text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">Gửi</button>
+        </div>
+      </div>
+      <div class="md:w-1/2">
+        <p class="text-gray-700"><strong>Địa chỉ:</strong> 123 Đường Sáng Tạo, Quận 1, TP. Hồ Chí Minh</p>
+        <p class="text-gray-700"><strong>Email:</strong> contact@sangtao.com</p>
+        <p class="text-gray-700"><strong>Điện thoại:</strong> (028) 1234 5678</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-pink-main text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>© 2025 Công Ty Của Sự Sáng Tạo. All rights reserved.</p>
+      <p><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a> | <a href="#" class="p-1 rounded hover:text-pink-light transition">Điều khoản</a></p>
+    </div>
+  </footer>
+</body>
+</html>
