@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Tina Yuzuki (Rio)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+      /* Áp dụng màu sắc từ trang web mẫu */
+    .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+    .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+    .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+    .border-pink-accent { border-color: #db2777; }
+    .hover\:border-pink-accent:hover { border-color: #db2777; }
+    .hover\:bg-pink-main:hover { background-color: #f472b6; }
+    .hover\:text-pink-main:hover { color: #f472b6; }
+
+    .transition:hover{
+        color:yellow;
+    }
+</style>
+</head>
+<body class="bg-pink-light font-sans">
+  <!-- Header -->
+  <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+          <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+          <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+          <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <h1 class="text-3xl font-bold text-center text-pink-600 mb-6 border-b-2 border-pink-600 pb-2">Chi Tiết Diễn Viên</h1>
+        <div class="bg-white p-6 rounded-lg shadow-md border border-pink-600">
+            <img src="https://i.ebayimg.com/images/g/Bh4AAOSwUZhbPhp0/s-l1200.jpg" alt="Tina Yuzuki (Rio)" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+            <h2 class="text-2xl font-semibold mb-4 text-center text-pink-600">Tina Yuzuki (Rio)</h2>
+            <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 29/10/1986</p>
+            <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Giải Best New Actress tại AV Actress Grand Prix 2006.</li>
+                <li>Thành viên nhóm nhạc Ebisu Muscats.</li>
+                <li>Tham gia phim truyền hình "Detective Lovesick" (2010).</li>
+                <li>Phát hành đĩa đơn âm nhạc vào năm 2010.</li>
+            </ul>
+            <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Tina Yuzuki, hay còn gọi là Rio, có cha là người Nhật và mẹ là người Bồ Đào Nha. Cô từng là người mẫu gravure trước khi gia nhập ngành AV. Sau khi nghỉ hưu vào năm 2016, cô kết hôn và chuyển hướng sang các hoạt động truyền thông.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Hot Wind (2005)</li>
+                <li>High School Uniform and Machine-Gun (2007)</li>
+                <li>Risky Mosaic Rio (2008)</li>
+                <li>Rio’s Everyday Carnival (2009)</li>
+                <li>Detective Lovesick (2010) - Phim truyền hình</li>
+                <li><a href="https://vn.javtiful.com/actress/sakura-momo" class="text-blue-600 hover:underline">Xem thêm</a></li>
+            </ul>
+            <p class="text-gray-700 mt-2">ページは自動的にリダイレクトされます。 <span id="countdown">3</span></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for auto-redirect -->
+    <script>
+        // Đếm ngược và chuyển hướng
+        let countdown = 3;
+        const countdownElement = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown <= 0) {
+                clearInterval(interval);
+                window.location.href = 'https://vnshare.cc/g8552804703';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
