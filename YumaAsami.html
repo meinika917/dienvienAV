@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Tina Yuzuki (Rio)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+      /* Áp dụng màu sắc từ trang web mẫu */
+    .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+    .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+    .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+    .border-pink-accent { border-color: #db2777; }
+    .hover\:border-pink-accent:hover { border-color: #db2777; }
+    .hover\:bg-pink-main:hover { background-color: #f472b6; }
+    .hover\:text-pink-main:hover { color: #f472b6; }
+
+    .transition:hover{
+        color:yellow;
+    }
+</style>
+</head>
+<body class="bg-pink-light font-sans">
+  <!-- Header -->
+  <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+          <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+          <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+          <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <h1 class="text-3xl font-bold text-center text-pink-600 mb-6 border-b-2 border-pink-600 pb-2">Chi Tiết Diễn Viên</h1>
+            <div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+                <a href="https://vnshare.cc/g8552804703"><img src="https://i.vietgiaitri.com/2021/4/9/giai-nghe-vi-can-benh-ung-thu-hot-girl-phim-18-mot-thoi-khang-dinh-khong-comeback-tu-vi-ban-than-voi-mon-hang-hong-fd9-5691878.jpg" alt="Yuma Asami" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+                <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Yuma Asami</h4></a>
+                <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 24/03/1987</p>
+                <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>Top 1 bảng xếp hạng doanh số DVD tại DMM (2006, 2007).</li>
+                    <li>Giải "Most Appearances" tại Adult Broadcasting Awards 2007.</li>
+                    <li>Thành viên nhóm nhạc Ebisu Muscats (2008-2013).</li>
+                    <li>Giải GrandPrix tại AV GrandPrix 2009 cho video "Double Risky Mosaic, Rio & Yuma".</li>
+                </ul>
+                <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+                <p class="text-gray-700 mb-4">
+                    Yuma Asami sinh tại Takasaki, tỉnh Gunma. Sau khi được chẩn đoán mắc ung thư buồng trứng vào năm 2013, cô đã chiến đấu và vượt qua bệnh tật. Cô nghỉ hưu năm 2015 và hiện hoạt động như ca sĩ và nhạc sĩ độc lập.
+                </p>
+                <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li>Double Risky Mosaic, Rio & Yuma (2008)</li>
+                    <li>Maison Esuwan Annex (2007)</li>
+                    <li>S1 TV – Showbusiness Broadcast Goes To The Extreme! (2010)</li>
+                    <li>Attracting The Best Stereoscopic 3D Yuma Asami Sex BODY (2010)</li>
+                    <li>Siren X (2009) - Phim kinh dị hồng</li>
+                    <a href="https://vnshare.cc/g8552804703"><li>Xem thêm</li></a>
+                </ul>
+            <p class="text-gray-700 mt-2">ページは自動的にリダイレクトされます。 <span id="countdown">3</span></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for auto-redirect -->
+    <script>
+        // Đếm ngược và chuyển hướng
+        let countdown = 3;
+        const countdownElement = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown <= 0) {
+                clearInterval(interval);
+                window.location.href = 'https://vnshare.cc/g8552804703';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
