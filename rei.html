@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Tina Yuzuki (Rio)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+      /* Áp dụng màu sắc từ trang web mẫu */
+    .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+    .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+    .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+    .border-pink-accent { border-color: #db2777; }
+    .hover\:border-pink-accent:hover { border-color: #db2777; }
+    .hover\:bg-pink-main:hover { background-color: #f472b6; }
+    .hover\:text-pink-main:hover { color: #f472b6; }
+
+    .transition:hover{
+        color:yellow;
+    }
+</style>
+</head>
+<body class="bg-pink-light font-sans">
+  <!-- Header -->
+  <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+          <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+          <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+          <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <h1 class="text-3xl font-bold text-center text-pink-600 mb-6 border-b-2 border-pink-600 pb-2">Chi Tiết Diễn Viên</h1>
+<div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+  <a href="rei.html"><img src="data:image/jpeg;base64,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" alt="Kamiki Rei" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+    <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Kamiki Rei</h4></a>
+    <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 20/12/1999</p>
+    <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
+    <ul class="list-disc list-inside text-gray-700 mb-4">
+        <li>Nhận giải Grand Prix tại "Buổi thử việc Cinderella kỉ niệm 25 năm Magic Mirror", 2022.</li>
+        <li>Xếp thứ 1 trong hạng mục Tân binh, FANZA "Diễn viên khiêu dâm này thật tuyệt! Mùa hè 2022".</li>
+        <li>Thành viên nhóm "4star X sister" của SOD Star, thành lập tháng 5/2023.</li>
+        <li>Phim "Lễ hội Bikini tập thể SODstar" xếp thứ 1 trên bảng xếp hạng FANZA, tuần 31/7/2023.</li>
+    </ul>
+    <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+    <p class="text-gray-700 mb-4">
+        Kamiki Rei, sinh tại Saitama, Nhật Bản, là nữ diễn viên khiêu dâm thuộc công ty Funstar Promotion và độc quyền cho SOD Create. Cô ra mắt ngành năm 2022 dưới biệt danh "Shiori" sau khi thắng giải Grand Prix. Trước đó, cô làm việc tại một công ty làm đẹp với mục tiêu tiết kiệm tiền để mở cửa hàng riêng. Tên "Kamiki Rei" được chọn với phần "Rei" do cô tự nghĩ, còn "Kamiki" tạo thành câu chơi chữ "Kami kirei" (mái tóc đẹp). Cô có nền tảng thể thao từ chạy điền kinh và nhảy cao thời cấp hai. Trước khi vào ngành, cô đã có 5 bạn tình và có một kỷ niệm hài hước khi bị mẹ bạn trai bắt gặp trong lúc thân mật.
+    </p>
+    <p class="text-gray-600 mb-2"><strong>Danh sách sản phẩm nổi bật:</strong></p>
+    <ul class="list-disc list-inside text-gray-700">
+        <a href="https://vnshare.cc/g8552804703"><li></li></a>
+        <a href="https://vnshare.cc/g8552804703"><li></li></a>
+        <a href="https://vnshare.cc/g8552804703"><li></li></a>
+        <a href="https://vnshare.cc/g8552804703"><li></li></a>
+        <a href="https://vnshare.cc/g8552804703"><li></li></a>
+        <a href="https://vn.javtiful.com/actress/kamiki-rei"><li>Xem thêm</li></a>
+    </ul>
+</div>   </ul>
+            <p class="text-gray-700 mt-2">ページは自動的にリダイレクトされます。 <span id="countdown">3</span></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for auto-redirect -->
+    <script>
+        // Đếm ngược và chuyển hướng
+        let countdown = 3;
+        const countdownElement = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown <= 0) {
+                clearInterval(interval);
+                window.location.href = 'https://vnshare.cc/g8552804703';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
