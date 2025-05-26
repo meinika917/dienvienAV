@@ -8,26 +8,154 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css.css">
+    <style>
+        /* Reset some default styles for better consistency */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Ensure body takes full width */
+        body {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* Header styles */
+        header {
+            width: 100%;
+            position: relative;
+        }
+
+        /* Toggle menu styles */
+        .toggle-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #fff;
+            padding: 0.5rem;
+        }
+
+        /* Ensure container doesn't overflow */
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Actor grid adjustments */
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .toggle-btn {
+                display: block;
+            }
+            .nav-menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0; /* Đảm bảo menu bắt đầu từ mép trái */
+                background-color: #ec4899; /* Matching bg-pink-500 */
+                padding: 1rem;
+                z-index: 40;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng để phân biệt */
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .nav-menu ul {
+                flex-direction: column;
+                align-items: flex-start; /* Căn trái các mục menu */
+                gap: 1rem;
+                width: 100%;
+                padding-left: 0; /* Xóa padding trái mặc định */
+            }
+            .nav-menu .flex.items-center {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                width: 100%;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .nav-menu {
+                display: flex !important; /* Ensure menu is always visible on larger screens */
+            }
+            .toggle-btn {
+                display: none !important; /* Hide toggle button on larger screens */
+            }
+        }
+
+        /* Ensure images don't overflow */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Contact section adjustments */
+        .contact-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body class="bg-pink-400 font-sans">
     <!-- Header -->
     <header class="bg-pink-500 text-white p-4 sticky top-0 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#"><h1 class="text-2xl font-bold">Diễn Viên AV Nhật Bản</h1></a>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="#" class="p-1 rounded">Trang chủ</a></li>
-                    <li><a href="dienvien.html" class="p-1 rounded">Diễn viên</a></li>
-                    <li><a href="gioithieu.html" class="p-1 rounded">Giới thiệu</a></li>
-                    <li><a href="#contact" class="p-1 rounded">Liên hệ</a></li>
-                </ul>
-            </nav>
-            <div class="flex items-center space-x-4">
-                <i class="fas fa-search cursor-pointer p-1 rounded"></i>
-                <i class="fas fa-user cursor-pointer p-1 rounded"></i>
+            <div class="flex items-center">
+                <nav class="nav-menu">
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="p-1 rounded">Trang chủ</a></li>
+                        <li><a href="dienvien.html" class="p-1 rounded">Diễn viên</a></li>
+                        <li><a href="gioithieu.html" class="p-1 rounded">Giới thiệu</a></li>
+                        <li><a href="#contact" class="p-1 rounded">Liên hệ</a></li>
+                    </ul>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-search cursor-pointer p-1 rounded"></i>
+                        <i class="fas fa-user cursor-pointer p-1 rounded"></i>
+                    </div>
+                </nav>
+                <div class="toggle-btn" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
+
+    <!-- JavaScript for toggle -->
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Reset menu state on window resize
+        window.addEventListener('resize', () => {
+            const navMenu = document.querySelector('.nav-menu');
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
 
     <!-- Introduction Section -->
     <section id="about" class="container mx-auto my-8 px-4">
@@ -119,199 +247,9 @@
                     <a href="https://vnshare.cc/g8552804703"><li>Rio’s Everyday Carnival (2009)</li></a>
                     <a href="https://vnshare.cc/g8552804703"><li>Detective Lovesick (2010) - Phim truyền hình</li></a>
                     <a href="https://vn.javtiful.com/actress/sakura-momo"><li>Xem thêm</li></a>
-
                 </ul>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
-              <a href="https://vnshare.cc/g8552804703"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7BEI2JnfCZ6HpwfD7nBnny8eoUNhXwKbpWg&s" alt="Sakura Momo" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
-                <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Sakura Momo</h4></a>
-                <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 03/12/1996</p>
-                <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
-                <ul class="list-disc list-inside text-gray-700 mb-4">
-                    <li>Giải Nữ diễn viên mới xuất sắc nhất tại Giải thưởng phim người lớn DMM 2018.</li>
-                    <li>Xếp thứ 25 trong bảng "FLASH 2020 BEST100 diễn viên gợi cảm".</li>
-                    <li>Xếp thứ 15 trong "Bảng xếp hạng FLASH 2021 diễn viên nữ gợi cảm".</li>
-                    <li>Xếp thứ 8 trong bảng "Bầu cử nữ diễn viên phim khiêu dâm SEXY 2023" của Asahi Geinō.</li>
-                    <li>Phim "BEAUTY VENUS VIII" xếp thứ 1 trên bảng xếp hạng FANZA tuần 18/12/2023.</li>
-                </ul>
-                <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
-                <p class="text-gray-700 mb-4">
-                    Sakura Momo sinh tại Akita, Nhật Bản. Trước khi trở thành nữ diễn viên phim khiêu dâm, cô là thần tượng áo tắm và có ước mơ trở thành ca sĩ. Cô nổi tiếng với tài năng ca hát, từng biểu diễn tại các sự kiện như "Hãy gặp nhau trên mặt trăng" và tự sáng tác bài hát "Spotlight". Cô giao phần lớn hoạt động mạng xã hội cho cơ quan chủ quản để tập trung vào công việc và tách biệt đời sống cá nhân.
-                </p>
-                <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
-                <ul class="list-disc list-inside text-gray-700">
-                    <li>Những mã phim J.AV của Momo Sakura:</li>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 015</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPZ – 958</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPZ – 976</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPZ – 995</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 028</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 502</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 597</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 092</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 105</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 134</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 149</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 201</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 213</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 279</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 292</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 613</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 306</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 321</li></a>
-                    <a href="https://vnshare.cc/g8552804703"><li>IPX – 336</li></a>
-                    <a href="https://vn.javtiful.com/actress/sakura-momo"><li>Xem thêm</li>
-                    </a>
-                </ul>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
-  <a href="https://vnshare.cc/g8552804703"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDuiNd3lb6IT2DMSd2-6WfUT6qKUyGyXnt4w&s" alt="Momonogi Kana" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
-    <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Momonogi Kana</h4></a>
-    <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 24/12/1996</p>
-    <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
-    <ul class="list-disc list-inside text-gray-700 mb-4">
-        <li>Giải thưởng độc lập của báo Tokyo Sport tại lễ trao giải Phim người lớn SKY PerfectTV, 3/3/2017.</li>
-        <li>Giải Nữ diễn viên mới tại DMM Adult Awards, 4/2017.</li>
-    </ul>
-    <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
-    <p class="text-gray-700 mb-4">
-        Momonogi Kana sinh tại Nhật Bản. Cô bắt đầu sự nghiệp diễn xuất phim người lớn vào tháng 2/2015 với nghệ danh Matsushima Masa, sau đó trở lại với nghệ danh Momonogi Kana vào tháng 9/2015. Ngoài diễn xuất, cô là ca sĩ, diễn viên lồng tiếng, phát thanh viên và thành viên của nhóm nhạc Ebisu★Muscats. Cô yêu thích ca hát (karaoke) và chơi bóng chuyền, từng là đội trưởng đội bóng chuyền ở trường trung học. Cô cũng nổi tiếng với việc ăn 100 bánh bao nhân thịt trong 1 giờ.
-    </p>
-    <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
-    <ul class="list-disc list-inside text-gray-700">
-        <li>Những mã phim J.AV của Momonogi Kana:</li>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-637 - FIRST IMPRESSION 89 超アイドル級美少女　衝撃のAVデビュー - 19/10/2015</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-653 - 昇天4本番＋一撃スマッシュ顔射フェラ 初野外!初拘束!初主観!初コスプレ!初ハメ撮り! - 19/11/2015</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-672 - 優等生学園アイドルと学校でしようよ 押しに弱い優等生 - 19/12/2015</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-689 - アイドルのかなと僕の甘すぎる同棲性活 アナタの彼女がアイドルだったら...全編主観 - 19/1/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-703 - 桃乃木かな 180分本指名　極上風俗4本番＋ピンサロ - 19/2/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-718 - ゴージャスオナニーサポート 怒涛の3時間 全シーン主観！ - 19/3/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-735 - 「ザーメンかけてください...」理性ぶっ飛び膣奥絶頂ぶっかけFUCK - 19/4/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-754 - 奪われた僕の彼女 「オマエの彼女ヤラせろよ！」 - 19/5/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-773 - 桃乃木ピンチ！『えっ、こんな場所でSEX！？』 - 19/6/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-789 - セックス生ライブチャット 桃ちゃんログイン中　超レア映像大放出！ - 19/7/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-809 - 調教されたアイドル桃乃木かな 首絞め！お漏らし！連続スパンキング！ - 19/8/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-824 - 至極のパイパンフェチマニアックス 初剃毛！ - 19/9/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-837 - デビュー1周年！新作発売イベントで最高のサービスを... - 19/10/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-855 - スキャンダル【熱愛編】 真剣交際でお持ち帰りされた桃乃木かな - 19/11/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-884 - 「かなのこと好きっちゃろ」　可愛すぎる彼女と方言SEX - 19/1/2017</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZ-904 - いきなりSEX　えっ？ノーカットですか？ - 19/2/2017</li></a>
-        <a href="https://vn.javtiful.com/actress/momonogi-kana"><li>Xem thêm</li></a>
-
-    </ul>
-</div>
-
-<div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
-  <a href="https://vnshare.cc/g8552804703"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTODISKy6vdddz6huHXR0kYDyJH-9i5QtckCQ&s" alt="Mikami Yua" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
-    <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Mikami Yua</h4></a>
-    <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 16/08/1993</p>
-    <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
-    <ul class="list-disc list-inside text-gray-700 mb-4">
-        <li>Giải thưởng Tỏa sáng và Công việc xuất sắc tại Adult Broadcasting Awards, 3/3/2016.</li>
-        <li>Giải Nữ diễn viên mới xuất sắc nhất tại DMM Adult Awards, 7/5/2016.</li>
-        <li>Giải Nữ diễn viên xuất sắc nhất tại DMM Adult Awards, 23/4/2017.</li>
-    </ul>
-    <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
-    <p class="text-gray-700 mb-4">
-        Mikami Yua, tên khai sinh Kitō Momona, sinh tại Nagoya, tỉnh Aichi, Nhật Bản. Cô gia nhập nhóm nhạc thần tượng SKE48 vào năm 2009, thuộc đội E, nhưng rời nhóm năm 2014 sau scandal với nam ca sĩ Yuya Tegoshi. Năm 2015, cô bắt đầu sự nghiệp diễn viên phim người lớn với nghệ danh Mikami Yua, ra mắt qua bộ phim "Princess Peach" của MUTEKI. Cô là thành viên của Ebisu Muscats (2015-2017) và nhóm K-pop Honey Popcorn từ năm 2018, dù nhóm này gặp phản đối tại Hàn Quốc. Mikami hoạt động trong lĩnh vực thời trang với thương hiệu YOUR'S, làm người mẫu cho các tạp chí như ViVi và LARME, và tham gia các chương trình truyền hình như Muscat Night. Kênh YouTube của cô đạt 777.000 lượt đăng ký tính đến tháng 4/2022, và cô có 2,4 triệu người theo dõi trên Instagram.
-    </p>
-    <p class="text-gray-600 mb-2"><strong>Danh sách phim và sản phẩm nổi bật:</strong></p>
-    <ul class="list-disc list-inside text-gray-700">
-        <li>Phim AV và sản phẩm âm nhạc của Mikami Yua:</li>
-        <a href="https://vnshare.cc/g8552804703"><li>SSNI-473</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>SSNI-279</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>SSNI-001 - Professional AV Debut - S1 No.1 Style - 07/10/2016</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>SSNI-077 - Luxury Soapland Girl - S1 No.1 Style - 07/12/2017</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>SSNI-344 - Forbidden Love - S1 No.1 Style - 07/11/2018</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>SSNI-802</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>SSNI-800</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>SSNI-674</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>SSNI-409</li></a>
-        <a href="https://vn.javtiful.com/actress/mikami-yua"><li>Xem thêm</li></a>
-    </ul>
-</div>
-
-<div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
-  <a href="https://vnshare.cc/g8552804703"><img src="data:image/jpeg;base64,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" alt="Arata Arina" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
-    <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Arata Arina</h4></a>
-    <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 15/12/1996</p>
-    <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
-    <ul class="list-disc list-inside text-gray-700 mb-4">
-        <li>Người mẫu đại diện cho AV OPEN 2017 cùng Shiraishi Marina và Takahashi Shōko.</li>
-        <li>Giải Nữ diễn viên xuất sắc nhất tại DMM.R18 Adult Awards, 5/2018.</li>
-        <li>Phim "Mikami Yua, Arata Arina và Aizawa Minami" xếp thứ nhất bảng xếp hạng FANZA (Blu-ray và DVD), 4/2023.</li>
-    </ul>
-    <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
-    <p class="text-gray-700 mb-4">
-        Arata Arina, tên cũ Hashimoto Arina, sinh tại Nhật Bản. Cô ra mắt trong ngành phim người lớn năm 2016 với S1 No.1 Style, sau đó chuyển sang FALENO (2020) và MOODYZ (2022). Cô là thành viên nhóm idol SEXY-J (2016-2017) và đồng sáng lập nhóm un panopticon girl (2018). Cô cũng là trợ lý thường trực cho kênh "Beach 9" của TV Saitama và sở hữu kênh YouTube "ありなの、これありな!". Sở thích của cô bao gồm xem video ma mị, và cô có kỹ năng tìm tóc phồng. Cô từng tham gia câu lạc bộ bóng mềm và bóng chuyền, yêu thích má lúm đồng tiền bên phải. Cô thành lập văn phòng riêng coolangatta vào năm 2020 và hiện thuộc công ty ACT.
-    </p>
-    <p class="text-gray-600 mb-2"><strong>Danh sách sản phẩm nổi bật:</strong></p>
-    <ul class="list-disc list-inside text-gray-700">
-        <a href="https://vnshare.cc/g8552804703"><li>MIDA-117</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>MIDA-154</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>MIDA-039</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>MIDA-097</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>MIDA-040</li></a>
-        <a href="https://vn.javtiful.com/actress/hashimoto-arina"><li>Xem thêm</li></a>
-
-    </ul>
-</div>
-
-<div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
-  <a href="https://vnshare.cc/g8552804703"><img src="data:image/jpeg;base64,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" alt="Akari Tsumugi" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
-    <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Akari Tsumugi</h4></a>
-    <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 31/03/1998</p>
-    <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
-    <ul class="list-disc list-inside text-gray-700 mb-4">
-        <li>Giải Người thuyết trình đặc biệt - Takei Sō tại DMM.R18 Adult Awards, 5/2018.</li>
-        <li>Nhóm Iberto Girl thứ 4 cùng Fukada Eimi và Takahashi Shōko, 7/2020.</li>
-        <li>Xếp thứ 3 hạng mục mạng xã hội, bảng FLASH 2020 BEST100 diễn viên gợi cảm, 12/2020.</li>
-        <li>Xếp thứ 31 trong Bảng xếp hạng FLASH 2021 diễn viên nữ gợi cảm, 8/2021.</li>
-    </ul>
-    <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
-    <p class="text-gray-700 mb-4">
-        Akari Tsumugi, sinh tại Kanagawa, Nhật Bản, bắt đầu sự nghiệp phim người lớn năm 2017 với Idea Pocket, sau đó chuyển sang Attackers (2018) và trở lại Idea Pocket (2019). Cô là fan của AKB48, đặc biệt hâm mộ Kojima Haruna, và yêu thích K-pop, có khả năng hiểu một chút tiếng Hàn. Sở thích của cô bao gồm lướt mạng, tìm hiểu về thần tượng, và thưởng thức bột năng (đã ghé hơn 40 cửa hàng). Lần đầu quan hệ của cô là năm 17 tuổi với một nhân viên bán thời gian. Cô được khen ngợi về tính cách vui tính và diễn xuất đa dạng, phân chia vai dâm dục cho Idea Pocket và vai tục tĩu cho Attackers.
-    </p>
-    <p class="text-gray-600 mb-2"><strong>Danh sách sản phẩm nổi bật:</strong></p>
-    <ul class="list-disc list-inside text-gray-700">
-        <a href="https://vnshare.cc/g8552804703"><li>PRED-771</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZZ-547</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>JUQ-907</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZZ-503</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>IPZZ-451</li></a>
-        <a href="https://vn.javtiful.com/actress/akari-tsumugi"><li>Xem thêm</li></a>
-    </ul>
-</div>
-
-<div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
-  <a href="https://vnshare.cc/g8552804703"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92gxryxNIYi5ECi4nPKB0Y4LtlPM-6NM04Q&s" alt="Meguri" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
-    <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Meguri</h4></a>
-    <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 04/05/1989</p>
-    <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
-    <ul class="list-disc list-inside text-gray-700 mb-4">
-        <li>Thần tượng áo tắm hàng đầu tại Pinky Net với doanh số DVD kỷ lục, 2007-2008.</li>
-        <li>Thành viên nhóm thần tượng Ebisu Muscats, 11/2008-3/2010.</li>
-        <li>Thành lập nhóm thần tượng BRW108, 2010, và me-me, 2011.</li>
-        <li>Đóng vai chính trong hơn 20 phim V-cinema, bao gồm phim "Gangsta", 2011.</li>
-    </ul>
-    <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
-    <p class="text-gray-700 mb-4">
-        Meguri, tên cũ Fujiura Megu, sinh tại Tokyo, Nhật Bản. Cô bắt đầu sự nghiệp năm 2007 với tư cách thần tượng áo tắm Chaku-ero tại Pinky Net, nổi bật với biệt danh "Quân đoàn Fuji" nhờ doanh số DVD cao. Cô ra mắt ngành phim khiêu dâm năm 2009 với MUTEKI, sau đó trở thành diễn viên độc quyền cho S1 No.1 Style và SOD Create (dưới tên Meguri từ 2011). Cô là thành viên của các nhóm thần tượng Ebisu Muscats, BRW108, và me-me. Meguri nghỉ ngành năm 2017 nhưng trở lại vào tháng 12/2019. Cô cũng đóng hơn 20 phim V-cinema, nổi bật với phim "Con người dâm đãng dễ nhìn thấu". Cô chuyển công ty chủ quản nhiều lần, hiện thuộc T-Powers.
-    </p>
-    <p class="text-gray-600 mb-2"><strong>Danh sách sản phẩm nổi bật:</strong></p>
-    <ul class="list-disc list-inside text-gray-700">
-]        <a href="https://vnshare.cc/g8552804703"><li>JUR-943</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>JUR-131</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>JUR-205</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>JUQ-493</li></a>
-        <a href="https://vnshare.cc/g8552804703"><li>PPPD-407</li></a>
-        <a href="https://vn.javtiful.com/actress/meguri"><li>Xem thêm</li></a>
-    </ul>
-</div>
-
-
-</div>
+        </div>
     </section>
 
     <!-- Contact Section -->
@@ -331,7 +269,7 @@
                 </div>
             </div>
             <div class="md:w-1/2">
-                <img src="data:image/png;base64,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" alt="Contact Us" class="w-full h-48 object-cover rounded-md contact-image">
+                
             </div>
         </div>
     </section>
