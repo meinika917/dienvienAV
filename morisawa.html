@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Morisawa Kana</title>
+    <link rel="icon" type="image/x-icon" href="LOGO.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Áp dụng màu sắc từ trang web mẫu */
+        .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+        .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+        .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+        .border-pink-accent { border-color: #db2777; }
+        .hover\:border-pink-accent:hover { border-color: #db2777; }
+        .hover\:bg-pink-main:hover { background-color: #f472b6; }
+        .hover\:text-pink-main:hover { color: #f472b6; }
+
+        .transition:hover {
+            color: yellow;
+        }
+
+        /* CSS cho popup quảng cáo */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .ad-popup {
+            background: linear-gradient(135deg, #4b0082, #8b008b);
+            border: 5px solid #ffd700;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            color: white;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .ad-popup h1 {
+            font-size: 24px;
+            margin: 0 0 10px;
+            color: #ff69b4;
+        }
+        .ad-popup p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .ad-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ff0000;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .ad-popup .close-btn:hover {
+            color: #ffffff;
+        }
+        .percentage {
+            font-size: 60px;
+            color: #ff69b4;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .register-btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .register-btn:hover {
+            background-color: #ff1493;
+        }
+        .notice {
+            font-size: 12px;
+            color: #ffd700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-pink-light font-sans">
+    <!-- Header -->
+    <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+                    <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+                    <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+                    <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+            <a href="#">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUTEhMWFRUXGRUYFxgXFxcYFxoXFxcXFxcWFxcYHSggGBolHRgVITEhJSkrLi4uGB8zODMtNygtLisBCgoKDg0OGhAQGi0dHx8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKy0tLS0tLS0tLf/AABEIAPsAyQMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQIDAQYHAAj/xABJEAABAgMEBwUFBQYDBgcAAAABAhEAAyEEEjFBBQZRYXGBkRMiobHwBzJCwdEUUmJy4SMkU5Ki8RWywhYzRFSCg2OTo7PS0+L/xAAYAQADAQEAAAAAAAAAAAAAAAABAgMABP/EACURAQEAAgICAQQCAwAAAAAAAAABAhEDITFBEiJRYYETMiNCQ//aAAwDAQACEQMRAD8A6XawQlgBhTgKdYX6FdSzMyBugjKjluo6QTpS0UIdmHhQnwizQ0olAYbVHiok58REvZ/QidaCyiCCd/h84X6tSz2sxRr8L7ybyuoCIzpicUJCQam8S3MQVoxITZhkVd9tyvd/puxvbemdKzWIAw3eEBaYUEWdR+I90bnpGbRaLxG5qwu1ptl66lqk+Cf1PhG8i1VYqBwgydLAQGxO7ZvgaUlydtfGGgAKGAqMG6GHgIWNSlANj6d42ayWbs0OcT7xzrSlMcOcBaNsAQmh7xq/PAeHUGD7baClLEVUNzYAcc2ww5Q0LXgu/M3JB6n0394tfvgJDkXh1YnxJiuyS7qUjMkkvsD/AE8Ytkze+nNn83wjMpmye+VHLZg+ePGIqS91PFR8h8+kZnF14vkBntLvuaKbDKU6iSC5VdZ6i9ionMbsmgCOFEsnaNuEaxrZrTKsjAm/Ma8JYPeJNASa3Qz9aPks161+RZh9ns7KnAMpWKZeVfvL3YDN8I5Ba7ctaipaipSi5J7yiTmYW00h5p/WGfa1XpqnAe4gUSkHZ0FTWkJlE5xBF44U84Isejysua7av5Uja2fel9hQ+7x8oKtFoIokh+D+VBFiZIAYMBnkPL1uiic4ohkjaQ5PBOLQ6e9gpyVrLqXxoIxKTdwUrwMYtFPvKO8+WUUoVu8STC00OLFPWPdNcA8bJq/rTMlkFVQPeT5tsMI9D2MkgkMPCKbUeznFmrX0YWQdu8aJtiZ8kTEe6QeuYIBgjs9x6mOa+zjTtyYZCjRfuvkqvnWNua0/8yP5f/zDFH255q0IDi+oJ/6fjbkIcSZRSwwx+f6QrkJK55N6iQ+YYqphwDc4d2mcCk+vRhIFa9p2cFkSsyQl9js58Yb2hYdkigAYHJhCawWftbQCK3QpRJwfADxPSGlskkGpbEuMd8CbEuCg5GJdvqfCNc01M75/CLv18TGwyT2ZKjlePIAmNSmXl1OKiSX6nLaYMZOyS2bf69cod2GSEjvYk+ZoICssu6lxU78P7QwRMvMNv0rXb+sUhKOUlrt01BFHx3By2AIfIPFNrmdpMu4XWJqMThmwpE56ygpVili4rQs9BgDtO5s4joeRe/aH4qufCpcPjBYatTJYO9AMGfrhUbc4ymeEqBqWfAV4fOLqsXxG0DDiMcq7oqE4X0u+Ywrx6mMCm0qugrbvUGZxYbH38uMc81/18NnBs1mP7X3VKFSjcPxYOcuLwb7TtbxIeRJU80sSR8D4AN8RBpsFcSDHH9JaPVLmS7yworSlZun3bwvMTtYgwPZ9XW3ghRxqc1EuXNeu+JJQB684IJAZKHfB2bo9ekN7PoTs0drOLDJOZ3cYSqQJYrFe7ygyYNVaAGagyEA2q1Z5DAZfrxgSWorNcN2e4bMoedEvZqiZfLAvtb65ccdjRK0UDD1zzjFjlEhkig2YDjtMNrLodSqnD1nAyzkNjha1w2NSjmT188IrmWNScY36TodgSWSkByTsGJcwvt+je1oAyMBRlK5H3R9MmMS+alw6JNGaRCA2e1/kTAkyYVLclyaiM2uwKQq6A/B/Tb4ElAhT8IpErDaz2goUlSaKSQXG70I6Z/tzJ9AfWOUzVOx9evrFd5W1PUw1gR9F6DlAIUrNSieQ7o8iecTt6SKgOKmCLHJ7OWEmpSBjuAhbpq29w03nziV8BE9W5bBcxsVEDayadHvRXpK0kqIB8mg+zIuSUJzCaj8RqrxfwhMpQJr47YzKdM2oCQ2aiEv4q8uFYQp94cH5k/SCdMIvTUoegD7KnyoIpB/aE5O3RqdQYeBREiX3aYV2bcMN/jxhjZgFECoauw0+X1G2AZMulMCfmHyhrYkByr7oamNTnu+hOyHgPKs6lzOzd090k0oMGoBifVKNhLKUXUuAGGDp6CrRGySbppVRqo+tgiZUXScAA5S953wfixr4bCCMqYkXn3EtwBPhGt616fFil9rioJuoG1Zw5BieUbFJIBWwJJUTuyc9HMcJ9pmsP2m0LuF5Ut0I2KIqpXXwECmxmymVLXaVqnTCVEqKiTiTUqPygC0WZTO9TxwyjbZnZWezJSVC/wB1wKq91zTifCE0smau8q7LQn4l4t+FOZ3CJS+17OtGegdGy7OkTZqb81X+7RmSPkNsL9L29UxZKyCcGHup3D65xZbtKhfdkkpQzLmKe8rcNg3cNkJ58yrAet++DJ3st8aQWbxbL1jD/QmhFTGLEJyGZ38IG0Foy+oKUCUivE7Tu846boNctPHPLqrIcIGeXo2OKrRGriUioFMcgOf9zDw2WXLF5WGADOVHYE5nd1IjKrSklkALIyFJSN6lYk7vDExKTKvG8olRzUaU+6gfAnd4xJQqtUpUz9pNZMtNQl6AijqI94+AyrWKJtnYOQxIqPuoyT+ZXrCG0xd5WAuj3RkSM+A8/GtSHILO5LA5q2ndQ8AN1RTRrytGhlFQrg3J2HB41jWHRgR3k5Yx0WfIYAY+eLqU35iOrQg0lYb6VkjF/BxTne5NGxy1Qyx3HPJU908MeETucIFSi6padxij7Ud0dPlz2afU9pnACNenq7WclDuCqvAVL7mBHOHOkVZDns5wq0AgqnLmHABuaj9AOsTvkk8GlumV9bIUIzOWXi0F6UmGu+Flvn9nJJzYjmaDzjMUyJ5mT1q4l9gDADHZ84xZpeG9z1rHrKyZdMWPIevMQZKlseQHA5+cUgVdZ0YNnXrgYZ2FKffcNnkKUrv8qb4EsSC5Iw/RmrDYzEy0EkNTBiHJfDrDFRMwhRQkE3iCoZgfdd6P5QVZlEGpIxYHBq3eNBthdZJRLqxL44Fzire3HKDFEICyp67agANjsaCzWtftPfZLIsIP7Sd3UVqHHeVyHiRHAbfPyGXqkbhrtp/7TaisAdnL7ssV90FnbaannGlzSFqOdeEL5qmtQ3RbVhI7NKEvmkOvgVKJO+jYxE2ZhemYmvfIY7O67nn/AHggzAhKQmjD4jUGocXmFGOAiqZZpsws1dgDnoKmFPHplqfDqaN+UZRPR9mCiCohKdpz4fWNl1a1BmziFTQUp30J5Zc+kbpM1QSgAMAkUFKc4S5zxFJhfNKNALlMEIUl8KkN0/SGGktETAAoKH5U1B50pwA4wi1j0DOROlqud0qS5QHJS10pSkgpO3B32RsOhkTkJ7C0VLBQBxDvQ74nl1Nw87ulGidMXO5NokdOe2H6LWZtEAhOZ93x+Eb8dm2FNo0QlSnauXrKDrGrs1BJJTs7qB0N2F2OtGIQECuJwo3JKchvi+TIOJYHwSNnr+/pQlpdRPFVX5qOA6RXMtJmUQwljEnA89m4YwBUzTfPdetEn8P3urttIGyKNIygmWQzU+TN0htIs7BznWtCd5GW4ZeSbWWeESlnYDA9j6cfUh5q99Pn84u+x7h1jOj031kj4lU+UPv8NVsRHVHNXYNLzyEFozoSXcs7nFRKuVAPACFml1lS0oTmQOZIEObaoISEpoEgAcAGA8IWJeiqet1tC3WGa9xAbE9BiT18IOcu8I7bOJn0rdZIG/HaMzBjC5aQgXDvxfCu+mxoukIbHMkh23UjEuSFKY1cVwwHHjnBcuVeN08H3YxUo7R0kgJ28nu5/wCnm0WrPbTGwSivPlsjynTRHxC6Adu182D8IIsckBDMc3picyovBBOYwISAGAcGnvGnrj10X2jaxiTZ+wlq70xysu5YtQ7HqOEbPp7TkqRJM1ZcVup2lmYbRh1jhGlbcqfNVNmFy7/QQuVPhjvstta2HifkIARZitKin4UqWasyQQPMgcSInb5hPz9es4psFtMouAlQLBSVAlJAUFh2ORSI0nQ5XtvmpujO0K56mX2jNnVyVPvwHKOi6H0GgMSkcGhTqBo0JskpTNfF9vzkqbkCByjd7NLjlyu66sOoNs8gACkTn2YEM0SlRfBka3Va9aLCpIISyk/dVVuEAK0UVLv1FGY1rRmOzHrG3KSIEnRtN8imxaOfGM6QsqU+8AdoIeHNnZKSY13Ss8rJagGJOA5wtmobG7pZbZspFUoHQKbheBblErFppBIcGmD5cBgOUKp+nLLKVdmrL0wQshzgHAZyxg5Nks1oTfkLB4HzBqIHfsb+GyCelSXBeOce0nSTIElJqs13JGJ9bYbLnqsr31dyrnLjHPtIW02ieZpwPuj8Iw64w+GO7tPK66bR7OtA9vMcjuIAJOTnLizx2H7LL/hQm1O0V2FkQjBSu8v8ysemHKGfZHZ4D6xeRzW7pJo0mZaXyQCrngPW6DdIT8cXirVtLS1zDiotyTRupMD26dWEngPalC2DnAAmE+ilPeUcVEvzc8/0gvTE+7LIGKqfM+UC6MF1l5tspt6w2LU2sie6Xorxc5irsHGHWGdgQAHUG4/XafQhRZrYZkxISGIBck4DeduHXOHJUyUy2IKmBplmfW7fFYSrrJJZ1uyathQPk9Bh4xXMtiUJVMWtkAEllBwPvEM1BWhyi20qCRdUQEIBUo0DZkEk4AAHkI5Prtrb27y5Tpku7MBfIwJH3RRgfzHIAW6HGbLtc9YVWuZRxLBaWk5Jr3lb89ztGpWq0BIbHZvO2PWy1tnXP6QpXMvF4nJvtW2SaXH3XOf6xCdKup5eJx+kW2UXi+Q86U8oxOQVkJSHKmYcfT8ooS99vofVpH7CUBgEJ8hD6SWjWtUphEiWFYhCQeIABjYSqOJ2QehcWX4BkzXwiyeTcU2LFuLQdtWV20YRiUCswr0dbpc0lCT3ks4IY1zrjGwpSJaXzhp2XLov0tNbuJgFdl7jNxo/UGLkjtFk5CDVS6Qu90866c709qwJqkrluFoUlRQah0sy0u7imDHCF2kES7N2Js5JWktMUxDg5KGwUjoVvs4I3jA5xo+saAkFsS7nYAHJ5AQZb4a4ydtU1s04qcrskk3c98W6haN+0W2Wkh0IN5Ww3a5b2Ea0uY5UrNR8Mo6v7JdF3EKmEe8GwyBSqLyajmyydDkAtTx69Ix2e/8AqP0jE2ayVHAJeuzhGufZLZ/FPj9YZM1SjspCEZhIfianxJhQtTnxhrpaZUiEpNCTE2hNpmY6wBkPE/2HWK+0JwpSv6wPevrJzUfDLwh1o6Q5AIdIYlhjsDbc84fGNTLRFjuIB+MkEnKmR3etkNbGb6lLVQFwn8qcWfaR0TANpIUUIQSFGhxoMyRuF48+mke0nW8S0mxyD7ourUC7BvdHzO8AYmKeCSbC6/a59pelS1PLvF2xWRtP8MHr0jmlqthzx9eMVTbUSX9CBFKeE1u7qu5jNRJaicYwgRhIcxakBPj/AG8IYnnsQ4SlvRfEmNn1K0MV/t1jH3eG3nCjVnQarXMq/Zpa+duxCd58ByjrsiwCXLAAZgGAyGQiHLlrpbjm+xugh3WGRjYJSHjX9DG6ttsbTKREIuSWu0fZZgUp+yV7zVuHa2aduyHdmtKZiQpCgoHMF4p0lZBMSU7Y0kSZsmYeyJQsVKB7qhtSPlB8LcfHOSee2waTl9nOExIozFtrvBCNNlbIAPGFkjWiURcnoKCczg8MpK5eKCkjaCDA2GWFx6yhtZUhIiyZMgEWloGtukkoSpSlBKUgkklgAMSTkIOyyfdnSdsCRjGja/L7GzG9SbOoBTuynBUNt4sScPdbinne0KVMtaSq8LPLL4G9MUPdozpS9WxNOEDa6aySLXdMs3jeUo7glN1CSw/FMIGUWww13UOTk3dRqkokrShIc3upwA4Owj6I1WsAlSkob4UkPmKsTTG6Exx/2bavrtFoTMKT2aVAqU2YBIAO39I7hOny5IvzSEpcAbHNAAGxow3RVG1Va5xVOEtKDdSylKBYAsSkFq4gH0YIv7oFsqwoBSSFXxfoaMoBhwZh0pUwRcX6f6RikmkJ944wBa5K1pKEYmj4APSvKLpaCtVIdWOzADCI5ZaPjhtr9k1bu1Uok7qCGEmzGX7vjWHwlCKZksRP55fdX4Y/Zq2kp8wJmqQB2ikslWASTR2Y1ji2nrBOStQKFhI7yls78xQlzhmSThUd+tch8oQWuwh4bHlvst456cAUvl6ziUtL+6HOwV5x3M6P/CDyjwsl34fCK/zfgn8X5cmser1oXKKwhTmiUtdUdqlFTMkb8coKsuqE1S0S1qF4kOlJcpCrxvrLMB3TxNKYxvWndMiSLksXpyvdS2D4FXyGcMNT9FGUFKmEqmzGUtRxerDlAvJZNtMJvQ/QmhUSEJQhLBIpxzJ2mGM6XlDGRIiKZTzGjmtXhWuVcY5isbHo60hQDQBpCQ0LbPaTLVTDZAl1VZjuNsmy3hRpDRyV+8H35xfZtKpIxiu2aRQA7iHtjYyykqtBozJbYTF0uzS5fugDgI07XTXWZJuiQgG8SLy3YM2CQzvXPKOf23WS1zvfnrZ/dSbg/pZxxeGx47lNl5ObvVdj03rJZrKkmbMF7JCe8s8E5cSwjkOtOt062qu/7uSD3ZYOOxSz8R8B4wpSl+Dlz8/OK5Ep1cMOsXw45j258+S5dR1nUXVKy2mxJ7eUCpcxZC8FAJSlPdU2DtTjFui/ZTLRON5alSbxxYEhvdoHNX2YYnLYNVVdhZrKhiVEcEuu8sEnZdTzjagk3Az/ADOfWp674Kd8sWWyIkpSiWAAKAJAFOQiGk7KicUypiQpAqsGo/ACGzrsw3xfNmJQm+cq5RRZrMUpJWpRdRWoEu16t38ow4QWWCWlF1KEgAAAABgAAwAbczRPsj90eH0jyiKUq+W/15RH7ePuq6j6xgLbBZroG3OGaBEZaWi2ON0yM3oqmRJZiiZNZ3gWmkVzxAMyzwUqaCYyBAnbUCJEI9bdNoskqjGapwhJw3rV+EPzoIc6d0pLsspU2ZlgBipWSRvP1MaNqrouZpC0G12gOgHujIkYJH4E+J5xbDGeb4SzvqCdUNW1N9pnuZi6i9iAfiOxR8AwjbJUu6oc/lDgSxFFpk4HYR40+fhCZW27PjNdJy5wAiej0XlEwObPB1j7sKZba7NeEa1brMUmojaDaIXW2ckwMobHKxri0HKALRKPOG0+0hJoIVW2e7tQwmlLk0/WqzCaZcp++oqI5JdjuOEaDb5a0LUmYGUHcb9u8Ru+np12dKmn4FC9wBc04P1hhrtouSqzqmKxSHSoNjsfMGOzjy+Mjj5J8rXOlTGSkDIVgvRw7wHPoKP4QDJluYd6t2PtLQlOLlPGpdubRap4u+6CSgouggplsGoWUBdSDsZI/r3Q1BKhsx6cjA9ilBCagAnvFgzk4nHliWpjFyVkIUrIOQBiW2VFYVgelpk6/KRJCSjumY5YhlhztOBwzxpDOYklNdxYY+cD2AslyGJd6NhQBjVmFH8MAUhJKMWfnTrBYHbLah+zSrvkA0cslRYKKhQGhavWKv8ADpf8L+n9YtTZkFRmEVa6GUXITUPWtaudxifbK2nrGAQUxEmJrMVkRx11RRPmUhSufUJd9u2mHjBmk5jJMLtBSTMSFn4q8sone6pOoPs0p4utcxMtClrISlIJJOAAGMF3AkRzDXDS8y3zxYrLVIPeOSiMST9xPieT048N3SWeWoAWZumLYwdMiX4J2/nV4DgX6hYrIiUhKEJCUpAAAwYQJq7oRFkkiUipxUrNSjio+sGhnFM8t9TwXHHXdZERmocEbYsaJXIQ4WRWhxFDBiERROF3vdeH1irR+lpM4EypiVsSk3SCyhiC2dRTeIA7ErkwPOlJzx2ZwSbx/CPH9IgmWE5Vz29YGh2CVo4GpDbvqYX23Q4OAjYQqMKEbTbca180R2aAsULgdY1ibZrVapaXSSgAMQLoVsL/ABGOp+1CV+7A/wDiI+cZ1RkBdik0+Ejooj5ReXWG0crvLTj40YqW4KFFR/CSeGG1o2/UfQShNE6eFyw4IugAlmYMcBvxjfVWFILsImZQMC8tb4RsVnnpUp0m84yy3EPTLKMfaAuaZQLMaitShiRxqHGBA4wkkyWqKHxgyxzwiZ2i0gqIulbC+1KORUUEHHlnst476O5KQnu76732sGf1nFaySm6HSVKpi7O5LGo2Nv2RbZVpJdJCrzlxwZsKc/lAejBNUtSl4MWNGIvOkpDOKUINcIskNs7JFzZT6eYj15P3f6T9IkhISTtNenDn4xD7QNh6H6RmXXIrWmCCIrmmkcmnVGs6zL/ZkDEsOpb5wz0ZKCEJGwQm09MvLQnaseFflE9Y9OJsdnK6FZ7stJzVv3DE8OELjN1TK6hV7QNZFJay2dzOmMDdxSFUAH4j4CuyCtTdXE2SW6mM1bXyMtiE7h4+S/UzV9SSbVaHVPmOa4pBx4KPgKbY3NIiuV1PjEZN3dYWqIpmRlaYoNDSJnGpMWIgaSvKC0QY1JtcNCfa7MqUGvYpckC+PdJbIFjyhdqJqvNsST2k0qvAOgVSlfxEFgS/yjcAmPEQ3etF97RIiChEiqKlzIUVaoiTGCY8BAFqHtOH7p/1o+cWagpewyv+5/7i4x7TU/uf/cR5mJ+zsPYZfGZ/nVFf+f7T/wBzWbKiKZMHmTFiZMQVBy5UWiQ8ECW0WBMEAJs5S5SSCQQ42HKGVlmBV1hdAAB3NkKbh1iCkxRL7qwHa96B9bYrx5auicmO5sRpO1dintAkqyZq4s4ADn1tgD/Eh/FT0V/9UXqtKJs1SEkEyWUsHF1OUDdgThiBhjBf2obT/KY6XMOVC+2z2Bgu0zWjVdN6QuuHjkrrgGZNCp7kgJlgrUTgN55PAOiLGq3T/tk0Hsk0syCMn/3qhtJDjlsEBWL97mmzpe64XaFDC4PckvtUakbAdsdEskgJAADDAAYAQZNNldsyZFIuMqLkJiV2NouwK5ZgdSIYTBA60RrBlUoTDCSIASawXZlwsGiwIqmqAjM6aAIWWi0PBtLIuXOigreIJSTFyJcKd5MXy0xhEuCEIjaBpntSS1j/AO4j5xL2ao/ckfmmf5zE/adOu2Wjg3gQRkXAfxgT2UaQVMlzJagGlkEEJCffvE0FMvGLa/x/tPf1tzKIrKqtnjyiekZwQHMKNH2q+pStpYcBT6nnHNfLok6NrsZCYymJAQ5KwRANuLB8Wq394YGA7XKCmSQ4JAIyIJYiDPIel8qy3ZbEuoh1GpBVnjUjGmwZRT9sP3T1H1ghAp3qly/i/HLrA11O09T9Y7HIH0tb7oMcu1l1jKZoTdvDOrchSHutGmghJJPAbTsjl9snmYoqOJiGGG/K+WevDrXs60jZTKuSmTMLKmguFFZABVUkkFtpjoMpIj5js05SFBaFFKgXBBYiOr6la/hbSrSQleCV/CrcdivPwhssLOy45y9OmNGVJiEmaFBxE3aEMpmS4HWIvnzYEUuBTSKp0vOMWdbHHCITZ8KzayVXRifKEp5DSZPKzuiSURmzSKCDRKFIMhbVSJcXdnFiZUZCDDaLtFCYuCY8lMZMBnP/AGsTVolSSkt+0INAQQULcEEEEHBjQxb7Kkp+zzJt1IKllJuhvdAZxg/eODZRX7Wl/u8sbZg/yqgbU63iVo6WcyZp/wDUUB5Q9/p+wk+s61ptZWpMpBqTXcBiflzgrRNkugUgDRFlKiVq95VT8hyjZLPKaISbXt9LZaIk0WJTHlCH0RWRAkwd5PF67q/KClwLe743OfD9YMncC9SqNJzky7ylEDeWAA4newxyG2EX+NS/uq/lP0gjSC0WhRlulaHaZgod00RjRRUOIAyoYn/hkn+EjoI6nM4tpvSBnTCfhFEjdt4mF6URNKYtCYOM0W3atKItSiPCJPDA3zUfXgySJNpU6KBKzinco5jflntHVpc4LDg0j5sjbNTdcV2QiXMJVJyzKOG1O7LLZEssPcVxz9V2SeIBtCmj1m0gickLQoKBDggvFFrXHPXRAlrmsIC0Ei8pSztYcvRinSloZJbHKG2hZF1CRuEJrs3o7kCCUCKZYpBSDFZErUkCJhMYBEeMwQSokRBZiZWNsUzVQtNHM/a9ae7IR+JSugb/AFQHqum9KkIySkq5qUojzhR7VNIX7WJY+BHioj6CNp1PsrIG4AckgJ+UNl1hGxv11uGjpTAQ0lpgSzJpBqInD1YBEVxJ4rmGCCiaYVW2fdc/J88t7t5ZwxnKhPaZd5YOSS+OJbZux9GDh/Zs+sQmiNFokAhA95RJFMVFyAcSKkByWG6HNwboolgM+/8ASLb6dsdLmfPqUxMxK7ECYciETAiIiYMZmIwYyTESYwmmgtOzbKruF0HFBw4jYd8b5ZdY5c4ApWHb3TRQ4iOXXormrbjlubOJ5ccyPjnY6jOnXlBzn5VhjO1vskgMqaCofCjvl9ndoOccdkqVdAUoq4knziM2W8LOGexy5duoWn2pJFJMhSt61BPgl/OFU72mW0+6JSBuSonqVfKNFlRdFPhCfOtkm69aQV/xJG5KJY/0vAkzWi2nG0zf5m8oTgxODqB8qY/7VWwYWmZzL+YiyXrzbk/8QVfmSn5AQkmJgWYIFxgzKjNJafVOnJmzgk3TeUEBiSAGqTX3U0dsdsdj1UlfskcBHCLFI7SfLQcCtL8AXPgI+htAoZAiPL6i3H7PZIglMUyxF4ETUZKopWqJmKJkCjFM8wvGPU9KQbOMAy0EkQ/FOyct6XypYCS9fXroYq/xMfx0/wAoga32RUxQQFXSS71ZrpGVa0Zvu7op/wBl53/OK/8AJT9Yug4uhb8YjO2xXM2xaMIcitJiUUqx5xZGFkxExmPGMzEVhLuenL0YsXhGAKDhGBhMSIiIiYjAiExNozHoLMRNJiBjKYDPTIEmwUuBJ0amizVuXetkobCT0Sr9I+gNDp7ojhGpI/fU/lV5iO8aJwEc/J5dHH4PZQi5oHlmLHiZ0ZkDLMETIFmQtNAlrUwigqKUO288otn49PMQDMnq+0SEP3VKqMiwWR/lT0i/FOkOW96MLHYyAFrLqdyGwGSfDDyehnap+6P5Vf8AxiEmqGOGDbmduEAch0EVTf/Z" alt="Morisawa Kana" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+                <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Morisawa Kana</h4>
+            </a>
+            <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 09/05/1992</p>
+            <p class="text-gray-600 mb-2"><strong>Thông tin cơ bản:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Thuộc công ty T-Powers</li>
+                <li>Bắt đầu sự nghiệp năm 2012 (dưới tên Iioka Kanako)</li>
+                <li>Đổi nghệ danh thành Morisawa Kana từ tháng 2/2016</li>
+            </ul>
+            <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Xếp thứ 10 trong bảng xếp hạng DMM năm 2015</li>
+                <li>Giữ vị trí cao trong bảng xếp hạng FANZA đến năm 2023</li>
+                <li>Phát hành sách ảnh đầu tiên năm 2020, tổ chức triển lãm ảnh năm 2021</li>
+                <li>Kỷ niệm 9 năm vào nghề với buổi trình diễn sân khấu tháng 7/2021</li>
+            </ul>
+            <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Morisawa Kana (sinh ngày 9/5/1992) là một nữ diễn viên phim người lớn và YouTuber người Nhật Bản, thuộc công ty T-Powers. Cô bắt đầu sự nghiệp vào năm 2012 dưới tên Iioka Kanako và đổi nghệ danh thành Morisawa Kana từ tháng 2/2016. Kana từng xếp thứ 10 trong bảng xếp hạng diễn viên AV của DMM năm 2015 và tiếp tục giữ vị trí cao trong các bảng xếp hạng của FANZA đến năm 2023. Cô hoạt động tích cực trên mạng xã hội từ năm 2019, tạo dựng cộng đồng người hâm mộ “Kanani~zu” và mở rộng sang TikTok, YouTube. Năm 2020, cô gọi vốn thành công để phát hành sách ảnh đầu tiên và tổ chức triển lãm ảnh vào năm 2021. Tháng 7/2021, Kana kỷ niệm 9 năm vào nghề bằng một buổi trình diễn sân khấu.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
+            <ul class="list-disc list-inside text-gray-700">
+                <a href="https://vn.javtiful.com/video/49775/mimk-141"><li>MIMK-141</li></a>
+                <a href="https://vn.javtiful.com/video/85439/dandy-960"><li>DANDY-960</li></a>
+                <a href="https://vn.javtiful.com/video/84838/dvaj-618"><li>DVAJ-618</li></a>
+                <a href="https://vn.javtiful.com/actress/iioka-kanako" target="_blank"><li>Xem thêm</li></a>
+        
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- Popup Quảng Cáo -->
+    <div class="overlay" id="adOverlay">
+        <div class="ad-popup">
+            <span class="close-btn" id="closeAd">X</span>
+            <h1>HỒNG 88</h1>
+            <p>TẶN THƯ THƯỞNG</p>
+            <div class="percentage">110%</div>
+            <p>ĐĂNG KÝ NGAY</p>
+            <button class="register-btn">Đăng Ký</button>
+            <p class="notice">Nhấn để mở tab mới và tiếp tục</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Xử lý popup quảng cáo
+        const overlay = document.getElementById('adOverlay');
+        const closeBtn = document.getElementById('closeAd');
+
+        // Ngăn chặn tương tác với trang cho đến khi đóng popup
+        document.body.style.overflow = 'hidden';
+
+        // Khi nhấp vào nút X hoặc bất kỳ đâu trên popup, mở tab mới và đóng popup
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === closeBtn) {
+                window.open('https://vnshare.cc/g9143488309', '_blank');
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Ngăn chặn tương tác với trang cho đến khi nhấp vào popup
+        document.addEventListener('click', (e) => {
+            if (!overlay.contains(e.target) && overlay.style.display !== 'none') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+
+        // Loại bỏ đoạn đếm ngược không cần thiết vì không có countdownElement
+        // Nếu bạn muốn thêm đếm ngược, hãy thêm phần tử <span id="countdown"></span> vào HTML
+    </script>
+</body>
+</html>
