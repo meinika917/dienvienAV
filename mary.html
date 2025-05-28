@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Mary Tachibana</title>
+    <link rel="icon" type="image/x-icon" href="LOGO.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Áp dụng màu sắc từ trang web mẫu */
+        .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+        .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+        .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+        .border-pink-accent { border-color: #db2777; }
+        .hover\:border-pink-accent:hover { border-color: #db2777; }
+        .hover\:bg-pink-main:hover { background-color: #f472b6; }
+        .hover\:text-pink-main:hover { color: #f472b6; }
+
+        .transition:hover {
+            color: yellow;
+        }
+
+        /* CSS cho popup quảng cáo */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .ad-popup {
+            background: linear-gradient(135deg, #4b0082, #8b008b);
+            border: 5px solid #ffd700;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            color: white;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .ad-popup h1 {
+            font-size: 24px;
+            margin: 0 0 10px;
+            color: #ff69b4;
+        }
+        .ad-popup p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .ad-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ff0000;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .ad-popup .close-btn:hover {
+            color: #ffffff;
+        }
+        .percentage {
+            font-size: 60px;
+            color: #ff69b4;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .register-btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .register-btn:hover {
+            background-color: #ff1493;
+        }
+        .notice {
+            font-size: 12px;
+            color: #ffd700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-pink-light font-sans">
+    <!-- Header -->
+    <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+                    <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+                    <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+                    <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+            <a href="#">
+                <img src="data:image/jpeg;base64,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" alt="Riko Tachibana" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+                <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Riko Tachibana</h4>
+            </a>
+            <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 10/11/1984</p>
+            <p class="text-gray-600 mb-2"><strong>Thông tin cơ bản:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Chiều cao: 1,68 m (quảng cáo: 1,70 m)</li>
+                <li>Ra mắt: Năm 2003</li>
+                <li>Nghỉ hưu: Tháng 3/2008</li>
+            </ul>
+            <p class="text-gray-600 mb-2"><strong>Thành tựu:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Đóng hơn 200 bộ phim khiêu dâm trong sự nghiệp 4 năm</li>
+                <li>Giải Xuất hiện nhiều nhất tại Giải thưởng phát sóng dành cho người lớn (2007)</li>
+                <li>Biệt danh: Riko-pin</li>
+            </ul>
+            <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Riko Tachibana (立花 里子/立花 製作者, Tachibana Riko/Tachibana Seisakusha) hay Satoko Tachibana là một nữ diễn viên điện ảnh khiêu dâm nổi tiếng của Nhật Bản. Cô sinh ngày 10 tháng 11 năm 1984 tại Tokyo, Nhật Bản. Đặc biệt cô có chiều cao hơn so với chiều cao trung bình của một phụ nữ Nhật Bản, Tachibana ra mắt vào năm 2003 và xuất hiện trong một số bộ phim thể hiện tầm vóc cao của cô. Tachibana là nữ diễn viên chính của hơn 200 bộ phim khiêu dâm trong suốt sự nghiệp kéo dài 4 năm. Năm 2007, tại Giải thưởng phát sóng dành cho người lớn (日本アダルト放送大賞 2007) cô được trao giải Xuất hiện nhiều nhất trong các video người lớn. Nữ diễn viên từ giã sự nghiệp vào tháng 3 năm 2008.<br><br>
+                Riko Tachibana sinh ra ở Tokyo ngày 10 tháng 11 năm 1984. Các quảng cáo từ khi bắt đầu sự nghiệp của cô nói rằng cô cao 1,70 mét. Trên thực tế, đó là ảnh sau khi chỉnh sửa, chiều cao thực tế của cô là 1,68 mét, nhưng vẫn cao hơn mức trung bình của nữ giới Nhật Bản. Cô từng rất tự ti về chiều cao của mình và cho rằng đàn ông thích phụ nữ có thân hình nhỏ. Sự tự ti của cô bắt đầu biến mất khi cô nhận thấy rằng nhiều đàn ông bị thu hút bởi vóc dáng của cô. Giống như nhiều nữ diễn viên đóng phim khiêu dâm, Tachibana được phát hiện bởi một tuyển trạch viên tài năng ở Shinjuku, Tokyo.<br><br>
+                Cô bắt đầu tham gia ngành công nghiệp phim khiêu dâm vào năm 2003. Cô tham gia lần đầu tiên trong bộ phim "Women Taller Than 170 cm" phát hành vào tháng 11 năm 2003 với nhãn Hibino. Cô ấy đã chứng minh cho cơn sốt sau đó với các nữ diễn viên có chiều cao. Vóc dáng cao ráo của Tachibana giúp cô chinh phục được vai nữ chính trong tập 3 của bộ phim xuất bản tháng 5/2004. Trong một cuộc phỏng vấn khi bộ phim được phát hành, đạo diễn phim Akinori, nói: "Bạn không biết việc tìm được những nữ diễn viên cao khó thế nào... nhu cầu quá lớn để lấp đầy".<br><br>
+                Sự nổi tiếng của Tachibana ngày càng tăng, cô có biệt danh Riko-pin (リ コ ぴ ん). Cô thể hiện nhiều chủ đề và vai diễn khác nhau, Tachibana tuyên bố rằng các vai diễn yêu thích của cô là "chị đại" và "phụ nữ hư hỏng". Trung bình trong sự nghiệp mỗi tuần đóng một bộ phim, vì vậy cô được mệnh danh "gái điếm khỏe nhất lịch sử". Khi lên nhận giải, Tachibana đã gây ấn tượng với khán giả khi kéo váy lên và khuỵu chân xuống. Cô hứa sẽ tiếp tục hoạt động trong ngành công nghiệp phim khiêu dâm, cô nói rằng: "Tôi vẫn muốn làm cho người khác có cực khoái. Đối với tôi cũng vậy. Tại sao chúng ta không cực khoái cùng nhau một lần nữa?". Tachibana thể hiện vai diễn "người đàn bà hư hỏng" yêu thích của mình lần cuối cùng trong video chia tay được xuất bản dưới nhãn hiệu Real Works vào tháng 3 năm 2008.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>Women Taller Than 170 cm (Hibino, 2003)</li>
+                <li>Tập 3 (phát hành tháng 5/2004)</li>
+                <li>Video chia tay (Real Works, 2008)</li>
+                <a href="https://vn.javtiful.com/actress/riko-tachibana" target="_blank"><li>Xem thêm</li></a>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- Popup Quảng Cáo -->
+    <div class="overlay" id="adOverlay">
+        <div class="ad-popup">
+            <span class="close-btn" id="closeAd">X</span>
+            <h1>HỒNG 88</h1>
+            <p>TẶN THƯ THƯỞNG</p>
+            <div class="percentage">110%</div>
+            <p>ĐĂNG KÝ NGAY</p>
+            <button class="register-btn">Đăng Ký</button>
+            <p class="notice">Nhấn để mở tab mới và tiếp tục</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Xử lý popup quảng cáo
+        const overlay = document.getElementById('adOverlay');
+        const closeBtn = document.getElementById('closeAd');
+
+        // Ngăn chặn tương tác với trang cho đến khi đóng popup
+        document.body.style.overflow = 'hidden';
+
+        // Khi nhấp vào nút X hoặc bất kỳ đâu trên popup, mở tab mới và đóng popup
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === closeBtn) {
+                window.open('https://vnshare.cc/g9143488309', '_blank');
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Ngăn chặn tương tác với trang cho đến khi nhấp vào popup
+        document.addEventListener('click', (e) => {
+            if (!overlay.contains(e.target) && overlay.style.display !== 'none') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+    </script>
+</body>
+</html>
