@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Hōngo Ai</title>
+    <link rel="icon" type="image/x-icon" href="LOGO.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Áp dụng màu sắc từ trang web mẫu */
+        .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+        .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+        .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+        .border-pink-accent { border-color: #db2777; }
+        .hover\:border-pink-accent:hover { border-color: #db2777; }
+        .hover\:bg-pink-main:hover { background-color: #f472b6; }
+        .hover\:text-pink-main:hover { color: #f472b6; }
+
+        .transition:hover {
+            color: yellow;
+        }
+
+        /* CSS cho popup quảng cáo */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .ad-popup {
+            background: linear-gradient(135deg, #4b0082, #8b008b);
+            border: 5px solid #ffd700;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            color: white;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .ad-popup h1 {
+            font-size: 24px;
+            margin: 0 0 10px;
+            color: #ff69b4;
+        }
+        .ad-popup p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .ad-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ff0000;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .ad-popup .close-btn:hover {
+            color: #ffffff;
+        }
+        .percentage {
+            font-size: 60px;
+            color: #ff69b4;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .register-btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .register-btn:hover {
+            background-color: #ff1493;
+        }
+        .notice {
+            font-size: 12px;
+            color: #ffd700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-pink-light font-sans">
+    <!-- Header -->
+    <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+                    <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+                    <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+                    <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+            <a href="#">
+                <img src="https://m.media-amazon.com/images/I/61dvCMYDkIL._AC_UF894,1000_QL80_.jpg" alt="Hōngo Ai" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+                <h4 class="text-xl font-semibold mb-2 text-center text-pink-accent">Hōngo Ai</h4>
+            </a>
+            <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 28/10/1999</p>
+            <p class="text-gray-600 mb-2"><strong>Thông tin cơ bản:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Nơi sinh: Tokyo, Nhật Bản</li>
+                <li>Chiều cao: 158 cm</li>
+                <li>Số đo 3 vòng: 85 - 53 - 85 cm (năm 2020)</li>
+                <li>Kích thước áo ngực: F</li>
+                <li>Công ty: Bstar (trước đây: FALENO, DINO)</li>
+                <li>Tên cũ: Nikaidō Yume</li>
+                <li>Ra mắt: Tháng 3/2020</li>
+            </ul>
+            <p class="text-gray-600 mb-2"><strong>Sự nghiệp:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Hōngo Ai (本郷愛, Bản-Hương Ái, sinh ngày 28 tháng 10 năm 1999), trước đây là Nikaidō Yume, là một nữ diễn viên phim người lớn người Nhật Bản thuộc công ty Bstar. Cô ra mắt vào tháng 3/2020 với FALENO qua công ty sản xuất DINO, và phim ra mắt của cô trở thành phim bán chạy nhất của FALENO năm 2020. Cô xếp thứ 3 trong bảng xếp hạng độ nổi bật của FANZA (tháng 12/2020), thứ 21 trong bầu cử SEXY của Asahi Geino (2021), và thứ 5 trong bảng xếp hạng nữ diễn viên gợi cảm của FLASH (2021). Năm 2021, cô đóng vai chính trong phim hành động *Nắm tay trần Ω* (Toei). Tháng 11/2021, cô chuyển sang Bstar và đổi tên thành Hōngo Ai, nhận danh hiệu Valuable Actress of VENUS và hai giải MVA và MTA tại Giải thưởng Sky PerfecTV! (2022). Cô cũng giành giải Nữ diễn viên xuất sắc tại Erodemy Awards 2022. Tháng 6/2023, cô ký hợp đồng độc quyền với S1, và phim *Lễ tạ ơn người hâm mộ S1* của cô dẫn đầu bảng xếp hạng Blu-ray và DVD của FANZA (tháng 6-7/2023). Bộ sưu tập *BEST 16 giờ Quỹ đạo nữ hoàng tình dục FALENO* xếp thứ 3 trên FANZA (tháng 8/2023). Ngoài ra, cô xuất hiện với tư cách ca sĩ tại sự kiện Millegen LIVE (2022) và tại Lễ hội áo tắm Kindai Mahjong (2023).
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Hōngo Ai thích xem phim và có kỹ năng massage. Là một *kikokushijo*, cô nói thông thạo tiếng Anh (TOEFL iBT: 111), một chút tiếng Hàn, và từng sống ở Mỹ và Canada trong 3 năm trung học. Cô gia nhập ngành phim người lớn vì sự nổi tiếng của Aoi Sora tại Mỹ và ngưỡng mộ Fukada Eimi. Sau khi đóng *Nắm tay trần Ω*, cô tập luyện đấm bốc và kickboxing, đồng thời bày tỏ mong muốn thử sức tại Hollywood.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
+            <ul class="list-disc list-inside text-gray-700">
+                <a href="https://vn.javtiful.com/video/82182/sone-561"><li>Hōngo Ai - Sone 561</li></a>
+                <a href="https://vn.javtiful.com/video/82182/sone-561"><li>Hōngo Ai - Sone 561</li></a>
+                <a href="https://vn.javtiful.com/video/74224/sone-504"><li>Hōngo Ai - Sone 504</li></a>
+                <li><a href="https://vn.javtiful.com/actress/nikaidou-yume" target="_blank">Xem thêm</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- Popup Quảng Cáo -->
+    <div class="overlay" id="adOverlay">
+        <div class="ad-popup">
+            <span class="close-btn" id="closeAd">X</span>
+            <h1>HỒNG 88</h1>
+            <p>TẶN THƯ THƯỞNG</p>
+            <div class="percentage">110%</div>
+            <p>ĐĂNG KÝ NGAY</p>
+            <button class="register-btn">Đăng Ký</button>
+            <p class="notice">Nhấn để mở tab mới và tiếp tục</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Xử lý popup quảng cáo
+        const overlay = document.getElementById('adOverlay');
+        const closeBtn = document.getElementById('closeAd');
+
+        // Ngăn chặn tương tác với trang cho đến khi đóng popup
+        document.body.style.overflow = 'hidden';
+
+        // Khi nhấp vào nút X hoặc bất kỳ đâu trên popup, mở tab mới và đóng popup
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === closeBtn) {
+                window.open('https://vnshare.cc/g9143488309', '_blank');
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Ngăn chặn tương tác với trang cho đến khi nhấp vào popup
+        document.addEventListener('click', (e) => {
+            if (!overlay.contains(e.target) && overlay.style.display !== 'none') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+    </script>
+</body>
+</html>
