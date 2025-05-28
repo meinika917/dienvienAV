@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Kaede Karen</title>
+    <link rel="icon" type="image/x-icon" href="LOGO.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Áp dụng màu sắc từ trang web mẫu */
+        .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+        .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+        .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+        .border-pink-accent { border-color: #db2777; }
+        .hover\:border-pink-accent:hover { border-color: #db2777; }
+        .hover\:bg-pink-main:hover { background-color: #f472b6; }
+        .hover\:text-pink-main:hover { color: #f472b6; }
+
+        .transition:hover {
+            color: yellow;
+        }
+
+        /* CSS cho popup quảng cáo */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .ad-popup {
+            background: linear-gradient(135deg, #4b0082, #8b008b);
+            border: 5px solid #ffd700;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            color: white;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .ad-popup h1 {
+            font-size: 24px;
+            margin: 0 0 10px;
+            color: #ff69b4;
+        }
+        .ad-popup p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .ad-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ff0000;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .ad-popup .close-btn:hover {
+            color: #ffffff;
+        }
+        .percentage {
+            font-size: 60px;
+            color: #ff69b4;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .register-btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .register-btn:hover {
+            background-color: #ff1493;
+        }
+        .notice {
+            font-size: 12px;
+            color: #ffd700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-pink-light font-sans">
+    <!-- Header -->
+    <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+                    <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+                    <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+                    <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+            <a href="#">
+                <img src="https://via.placeholder.com/150" alt="Kaede Karen" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+                <h4 class="text-xl font-semibold mb-2 text-center text-pink-accent">Kaede Karen</h4>
+            </a>
+            <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 25/08/1999</p>
+            <p class="text-gray-600 mb-2"><strong>Thông tin cơ bản:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Nơi sinh: Tokyo, Nhật Bản</li>
+                <li>Công ty: Life Promotion</li>
+                <li>Ra mắt: Tháng 8/2018 (thần tượng áo tắm), Tháng 12/2018 (phim khiêu dâm)</li>
+                <li>Trở lại: Tháng 6/2023</li>
+            </ul>
+            <p class="text-gray-600 mb-2"><strong>Sự nghiệp:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Kaede Karen (楓かえで かれん, Phong Khả-Liên, sinh ngày 25 tháng 8 năm 1999) là một nữ diễn viên khiêu dâm người Nhật Bản, thuộc công ty Life Promotion. Cô ra mắt trong ngành thần tượng áo tắm vào tháng 8/2018. Tháng 12/2018, cô gia nhập ngành phim khiêu dâm với tư cách diễn viên độc quyền kỷ niệm 20 năm thành lập Idea Pocket. Tháng 10/2019, cô được chọn làm diễn viên nữ quảng cáo cho hội đồng chiến dịch đĩa Blu-ray cùng với Hinata Marin. Trong các bảng xếp hạng, cô đạt thứ 9 trong "Bầu cử nữ diễn viên phim khiêu dâm SEXY đang hoạt động 2021" của Asahi Geino (tháng 4/2021) và thứ 23 trong "Bảng xếp hạng FLASH 2021 diễn viên nữ gợi cảm" do 300 độc giả bình chọn (tháng 8/2021). Cô dẫn đầu danh sách diễn viên được thuê băng nhiều nhất trên FANZA trong tháng 8 và 9/2021. Ngày 28/3/2022, cô thông báo rời ngành trên Twitter, nhưng trở lại vào ngày 27/6/2023, tiếp tục hoạt động dưới công ty Life Promotion. Bộ sưu tập phim “Kaede Karen-Điểm tận cùng của nét đẹp thuần khiết-Bộ 12 đĩa COMPLETE BEST 48 giờ gồm 37 tác phẩm tuyệt đẹp” đạt vị trí số 1 trong xếp hạng bán hàng qua bưu điện của FANZA vào tuần 13/2/2023.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Kaede Karen sinh ra tại Tokyo. Cô có kỹ năng đặc biệt là nấu ăn, đặc biệt món Nikujaga, và yêu thích các loại kẹo. Trong ngành phim khiêu dâm, cô ngưỡng mộ Hashimoto Arina. Người ta nói rằng cô có ngoại hình giống nữ diễn viên Kawaguchi Haruna. Cô nuôi một chú chó Nhật tên “Ushi” (bò con). Trái ngược với vẻ ngoài, cô là fan của anime và từng làm việc tại Animate, nơi cô phát triển sở thích đọc truyện tranh BL (đồng tính nam). Cô có biệt danh “phiên bản phụ nữ của Yoshimura Taku”. Nghệ sĩ Aoyagi Takaya mô tả cô là người chú ý đến các chi tiết nhỏ trong cảnh quay. Kiryūin Shō của nhóm Golden Bomber là fan của cô và đã bày tỏ sự vui mừng khi cô trở lại, ví việc này như “một ban nhạc giải thể tái hợp”.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
+            <ul class="list-disc list-inside text-gray-700">
+                  <a href="https://vn.javtiful.com/video/77867/ipzz-484"><li>IPZZ-484</li></a>
+                <a href="https://vn.javtiful.com/video/79988/ipzz-508"><li>IPZZ-508</li></a>
+                <a href="https://vn.javtiful.com/video/78403/mida-039"><li>MIDA-039</li></a>
+                <li><a href="https://vn.javtiful.com/actress/kaede-karen" target="_blank">Xem thêm</a></li>
+              </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- Popup Quảng Cáo -->
+    <div class="overlay" id="adOverlay">
+        <div class="ad-popup">
+            <span class="close-btn" id="closeAd">X</span>
+            <h1>HỒNG 88</h1>
+            <p>TẶN THƯ THƯỞNG</p>
+            <div class="percentage">110%</div>
+            <p>ĐĂNG KÝ NGAY</p>
+            <button class="register-btn">Đăng Ký</button>
+            <p class="notice">Nhấn để mở tab mới và tiếp tục</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Xử lý popup quảng cáo
+        const overlay = document.getElementById('adOverlay');
+        const closeBtn = document.getElementById('closeAd');
+
+        // Ngăn chặn tương tác với trang cho đến khi đóng popup
+        document.body.style.overflow = 'hidden';
+
+        // Khi nhấp vào nút X hoặc bất kỳ đâu trên popup, mở tab mới và đóng popup
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === closeBtn) {
+                window.open('https://vnshare.cc/g9143488309', '_blank');
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Ngăn chặn tương tác với trang cho đến khi nhấp vào popup
+        document.addEventListener('click', (e) => {
+            if (!overlay.contains(e.target) && overlay.style.display !== 'none') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+    </script>
+</body>
+</html>
