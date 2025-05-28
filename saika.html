@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Kawakita Saika</title>
+    <link rel="icon" type="image/x-icon" href="LOGO.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Áp dụng màu sắc từ trang web mẫu */
+        .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+        .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+        .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+        .border-pink-accent { border-color: #db2777; }
+        .hover\:border-pink-accent:hover { border-color: #db2777; }
+        .hover\:bg-pink-main:hover { background-color: #f472b6; }
+        .hover\:text-pink-main:hover { color: #f472b6; }
+
+        .transition:hover {
+            color: yellow;
+        }
+
+        /* CSS cho popup quảng cáo */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .ad-popup {
+            background: linear-gradient(135deg, #4b0082, #8b008b);
+            border: 5px solid #ffd700;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            color: white;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .ad-popup h1 {
+            font-size: 24px;
+            margin: 0 0 10px;
+            color: #ff69b4;
+        }
+        .ad-popup p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .ad-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ff0000;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .ad-popup .close-btn:hover {
+            color: #ffffff;
+        }
+        .percentage {
+            font-size: 60px;
+            color: #ff69b4;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .register-btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .register-btn:hover {
+            background-color: #ff1493;
+        }
+        .notice {
+            font-size: 12px;
+            color: #ffd700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-pink-light font-sans">
+    <!-- Header -->
+    <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+                    <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+                    <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+                    <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+            <a href="saika.html">
+                <img src="data:image/jpeg;base64,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" alt="Kawakita Saika" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+                <h4 class="text-xl font-semibold mb-2 text-center text-pink-accent">Kawakita Saika</h4>
+            </a>
+            <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 24/04/1999</p>
+            <p class="text-gray-600 mb-2"><strong>Thông tin cơ bản:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Nơi sinh: Chiba, Nhật Bản</li>
+                <li>Chiều cao: 169 cm</li>
+                <li>Số đo 3 vòng: 87 - 57 - 86 cm (năm 2019)</li>
+                <li>Kích thước áo ngực: E</li>
+                <li>Công ty: Cruise Group</li>
+                <li>Ra mắt: Tháng 4/2018</li>
+                <li>Nickname: Sai-chan</li>
+            </ul>
+            <p class="text-gray-600 mb-2"><strong>Sự nghiệp:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Kawakita Saika (河北彩花, Hà-Bắc Thái-Hoa, sinh ngày 24 tháng 4 năm 1999) là một nữ diễn viên phim người lớn người Nhật Bản thuộc công ty Cruise Group. Cô ra mắt vào tháng 4/2018 với *Tân binh NO.1 STYLE Kawakita Saika ra mắt ngành phim khiêu dâm*, dẫn đầu bảng xếp hạng video FANZA 2018, với ba phim trong top 10. Phim *180 phút đặc biệt* của cô giành giải AV Battle Royale 2018, và phim ra mắt nhận giải Hình ảnh tốt nhất tại FANZA Adult Awards 2019. Cô nghỉ diễn vào tháng 3/2019 sau khi bị người quen nhận ra, nhưng trở lại vào tháng 7/2021 với *Kawakita Saika Re:start!*, dẫn đầu bảng xếp hạng FANZA. Cô đạt vị trí thứ 1 trong bảng xếp hạng nữ diễn viên của FANZA (2021-2023), FLASH (2021), và thứ 11 (2022) và 4 (2023) trong bầu cử SEXY của Asahi Geino. Các phim như *Vị thần khỏa thân* và *Quan hệ tình dục cực khoái* thống trị bảng xếp hạng FANZA và Asahi Geino. Cô nhận giải Nữ diễn viên xuất sắc nhất Pre-Adult 2021 và Asa-Gei áo tắm 2022. Saika cũng biểu diễn ca hát tại sự kiện “Hãy gặp nhau trên mặt trăng” (2022, 2023) và xuất hiện tại Lễ hội áo tắm Kindai Mahjong (2023).
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Kawakita Saika thích xem phim và nhạc kịch, có kỹ năng nhớ đường đi xuất sắc, và cao 169 cm. Cô chơi bóng rổ ở trường, chỉ quan hệ tình dục một lần trước khi vào ngành (năm đầu cấp ba). Cô gia nhập ngành nhờ kỹ năng hóa trang và ít mặc đồng phục trường. Sau khi nghỉ diễn, cô làm việc tại một công ty thông thường nhưng trở lại ngành vì cơ hội tốt hơn. Nhà sản xuất Tomoko ca ngợi cô hoàn hảo về ngoại hình và diễn xuất, dù cô thiếu tự tin.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
+            <ul class="list-disc list-inside text-gray-700">
+                <a href="https://vn.javtiful.com/video/85547/sone-725"><li>SONE-725</li></a>
+                <a href="https://vn.javtiful.com/video/67776/sone-360"><li>sone-360</li></a>
+                <li><a href="https://vn.javtiful.com/actress/kawakita-saika" target="_blank">Xem thêm</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- Popup Quảng Cáo -->
+    <div class="overlay" id="adOverlay">
+        <div class="ad-popup">
+            <span class="close-btn" id="closeAd">X</span>
+            <h1>HỒNG 88</h1>
+            <p>TẶN THƯ THƯỞNG</p>
+            <div class="percentage">110%</div>
+            <p>ĐĂNG KÝ NGAY</p>
+            <button class="register-btn">Đăng Ký</button>
+            <p class="notice">Nhấn để mở tab mới và tiếp tục</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Xử lý popup quảng cáo
+        const overlay = document.getElementById('adOverlay');
+        const closeBtn = document.getElementById('closeAd');
+
+        // Ngăn chặn tương tác với trang cho đến khi đóng popup
+        document.body.style.overflow = 'hidden';
+
+        // Khi nhấp vào nút X hoặc bất kỳ đâu trên popup, mở tab mới và đóng popup
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === closeBtn) {
+                window.open('https://vnshare.cc/g9143488309', '_blank');
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Ngăn chặn tương tác với trang cho đến khi nhấp vào popup
+        document.addEventListener('click', (e) => {
+            if (!overlay.contains(e.target) && overlay.style.display !== 'none') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+    </script>
+</body>
+</html>
