@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Yuzuriha Karen</title>
+    <link rel="icon" type="image/x-icon" href="LOGO.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Áp dụng màu sắc từ trang web mẫu */
+        .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+        .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+        .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+        .border-pink-accent { border-color: #db2777; }
+        .hover\:border-pink-accent:hover { border-color: #db2777; }
+        .hover\:bg-pink-main:hover { background-color: #f472b6; }
+        .hover\:text-pink-main:hover { color: #f472b6; }
+
+        .transition:hover {
+            color: yellow;
+        }
+
+        /* CSS cho popup quảng cáo */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .ad-popup {
+            background: linear-gradient(135deg, #4b0082, #8b008b);
+            border: 5px solid #ffd700;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            color: white;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .ad-popup h1 {
+            font-size: 24px;
+            margin: 0 0 10px;
+            color: #ff69b4;
+        }
+        .ad-popup p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .ad-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ff0000;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .ad-popup .close-btn:hover {
+            color: #ffffff;
+        }
+        .percentage {
+            font-size: 60px;
+            color: #ff69b4;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .register-btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .register-btn:hover {
+            background-color: #ff1493;
+        }
+        .notice {
+            font-size: 12px;
+            color: #ffd700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-pink-light font-sans">
+    <!-- Header -->
+    <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+                    <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+                    <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+                    <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+            <a href="#">
+                <img src="data:image/jpeg;base64,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" alt="Yuzuriha Karen" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+                <h4 class="text-xl font-semibold mb-2 text-center text-pink-accent">Yuzuriha Karen</h4>
+            </a>
+            <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 28/03/2001</p>
+            <p class="text-gray-600 mb-2"><strong>Thông tin cơ bản:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Nơi sinh: Okinawa, Nhật Bản</li>
+                <li>Công ty: T-Powers</li>
+                <li>Ra mắt: Tháng 2/2021</li>
+                <li>Hãng độc quyền: OPPAI (từ tháng 5/2021), OPPAI và Premium (từ tháng 10/2021)</li>
+            </ul>
+            <p class="text-gray-600 mb-2"><strong>Sự nghiệp:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Yuzuriha Karen (楪ゆずりは カレン, sinh ngày 28 tháng 3 năm 2001) là một nữ diễn viên khiêu dâm người Nhật Bản, thuộc công ty T-Powers. Cô ra mắt ngành phim khiêu dâm vào tháng 2/2021 và trở thành diễn viên độc quyền của hãng OPPAI từ tháng 5/2021, sau đó là cả OPPAI và Premium từ tháng 10/2021. Trong bảng xếp hạng của FLASH (Kobunsha), cô đạt vị trí thứ 14 trong "Bảng xếp hạng nữ diễn viên gợi cảm nửa đầu năm 2021" và thứ 2 trong bảng xếp hạng nữ diễn viên gợi cảm khác. Năm 2021, FANZA xếp cô ở vị trí thứ 19 trong bảng xếp hạng nữ diễn viên khiêu dâm hàng năm. Phim của cô, "Bắn không giới hạn! Khi chơi bạn có thể bắn ra với số lần tùy thích với lượng xà phòng không giới hạn!", là phim bán chạy nhất của OPPAI năm 2021 và được giới thiệu trên tạp chí Playboy hàng tuần của Shūeisha, đồng thời nhận giải Hình ảnh tốt nhất tại Giải thưởng Erodemy 2022. Tháng 4/2022, cô được chọn làm đại diện cho "Chiến dịch cảm ơn khán giả Tuần lễ Vàng năm 2022" của FANZA, và tháng 7/2022, cô đại diện cho "Chiến dịch CSK năm 2022 Ngực! Mông! Eo!". Cô xếp thứ 39 và 40 trong các bảng bầu cử nữ diễn viên phim khiêu dâm SEXY của Asahi Geinō vào năm 2022 và 2023. Phim "Mặc dù điều đó đáng lẽ bị cấm...Người phụ nữ này bí mật cầu xin được chảy tràn tinh dịch!" của cô là phim bán chạy nhất năm của Premium. Trong bảng xếp hạng video FANZA, các phim như "Khi tôi phàn nàn với người hàng xóm về phòng chứa rác..." (30/1/2023) và "Tôi đã cương cứng khi thấy bạn gái ngực lớn..." (19/6/2023) đều đạt vị trí số 1. Cô cũng trình diễn trực tiếp lần đầu tại sự kiện "Chương trình đặc biệt của tân binh vol.73 Chúng ta hãy gặp nhau trên mặt trăng" vào ngày 24/5/2023.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Yuzuriha Karen sinh ra và lớn lên tại Uchinanchu, Okinawa. Dù đến từ Okinawa, cô thừa nhận mình không giỏi bơi lội và tự mô tả là "người bơi trong vô vọng". Cô bắt đầu yêu thích đua ngựa và cưỡi ngựa như một sở thích từ năm 2021. Ngực của cô phát triển từ khi học lớp 4. Lần đầu quan hệ tình dục của cô là vào năm ba trung học với một giáo viên mà cô có tình cảm, điều này ảnh hưởng đến sở thích của cô với các bộ phim khiêu dâm chủ đề tình yêu giữa giáo viên và học sinh. Nam diễn viên Shibue Jōji mô tả cơ thể cô mảnh mai với bộ ngực nở, đàn hồi và gợi cảm. Ban biên tập Asahi Geinō ca ngợi ngực cô vì kích cỡ, hình dáng và độ cứng, đề cử cô cho "Giải thưởng Ngực đẹp và lôi cuốn cùng BODY gợi tình" tại Giải thưởng phim khiêu dâm Asagei 2022. Trong đợt cao điểm Yuyake năm 2023, phim của cô được phân tích tâm lý nhân vật trong các cảnh yêu đương.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
+            <ul class="list-disc list-inside text-gray-700">
+             <a href="https://vn.javtiful.com/video/85176/pred-763"><li>PRED-763</li>
+                <a href="https://vn.javtiful.com/video/85175/pppe-334"><li>PPPE-334</li></a>
+                <a href="https://vn.javtiful.com/video/83930/pred-709"><li>PRED-709</li></a>
+                <li><a href="https://vn.javtiful.com/actress/yuzuriha-karen" target="_blank">Xem thêm</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- Popup Quảng Cáo -->
+    <div class="overlay" id="adOverlay">
+        <div class="ad-popup">
+            <span class="close-btn" id="closeAd">X</span>
+            <h1>HỒNG 88</h1>
+            <p>TẶN THƯ THƯỞNG</p>
+            <div class="percentage">110%</div>
+            <p>ĐĂNG KÝ NGAY</p>
+            <button class="register-btn">Đăng Ký</button>
+            <p class="notice">Nhấn để mở tab mới và tiếp tục</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Xử lý popup quảng cáo
+        const overlay = document.getElementById('adOverlay');
+        const closeBtn = document.getElementById('closeAd');
+
+        // Ngăn chặn tương tác với trang cho đến khi đóng popup
+        document.body.style.overflow = 'hidden';
+
+        // Khi nhấp vào nút X hoặc bất kỳ đâu trên popup, mở tab mới và đóng popup
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === closeBtn) {
+                window.open('https://vnshare.cc/g9143488309', '_blank');
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Ngăn chặn tương tác với trang cho đến khi nhấp vào popup
+        document.addEventListener('click', (e) => {
+            if (!overlay.contains(e.target) && overlay.style.display !== 'none') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+    </script>
+</body>
+</html>
