@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Tsukasa Aoi </title>
+    <link rel="icon" type="image/x-icon" href="LOGO.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Áp dụng màu sắc từ trang web mẫu */
+        .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+        .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+        .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+        .border-pink-accent { border-color: #db2777; }
+        .hover\:border-pink-accent:hover { border-color: #db2777; }
+        .hover\:bg-pink-main:hover { background-color: #f472b6; }
+        .hover\:text-pink-main:hover { color: #f472b6; }
+
+        .transition:hover {
+            color: yellow;
+        }
+
+        /* CSS cho popup quảng cáo */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .ad-popup {
+            background: linear-gradient(135deg, #4b0082, #8b008b);
+            border: 5px solid #ffd700;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            color: white;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .ad-popup h1 {
+            font-size: 24px;
+            margin: 0 0 10px;
+            color: #ff69b4;
+        }
+        .ad-popup p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .ad-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ff0000;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .ad-popup .close-btn:hover {
+            color: #ffffff;
+        }
+        .percentage {
+            font-size: 60px;
+            color: #ff69b4;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .register-btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .register-btn:hover {
+            background-color: #ff1493;
+        }
+        .notice {
+            font-size: 12px;
+            color: #ffd700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-pink-light font-sans">
+    <!-- Header -->
+    <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+                    <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+                    <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+                    <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <h1 class="text-3xl font-bold text-center text-pink-600 mb-6 border-b-2 border-pink-600 pb-2">Chi Tiết Diễn Viên</h1>
+<div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+  <a href="arata.html"><img src="data:image/jpeg;base64,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" alt="Arata Arina" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+    <h4 class="text-xl font-semibold mb-2 text-center text-pink-600">Tsukasa Aoi</h4></a>
+    <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 14 tháng 8, 1990 (34 tuổi)</p>
+    <p class="text-gray-600 mb-2"><strong>Số đo ba vòng: </strong> 88 - 58 - 86 cm</p>
+    <p class="text-gray-600 mb-2"><strong>Danh sách sản phẩm nổi bật:</strong></p>
+    <ul class="list-disc list-inside text-gray-700">
+        <a href="https://vn.javtiful.com/video/79285/dv-1424"><li>DV-1424</li></a>
+        <a href="https://vn.javtiful.com/video/72258/ssni-987"><li>SSNI-987</li></a>
+        <a href="https://vn.javtiful.com/video/66836/sone-337"><li>SONE-337</li></a>
+        <a href="https://vn.javtiful.com/actress/aoi-tsukasa"><li>Xem thêm</li></a>
+    </ul>
+          </div>
+    </section>
+
+  <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- Popup Quảng Cáo -->
+    <div class="overlay" id="adOverlay">
+        <div class="ad-popup">
+            <span class="close-btn" id="closeAd">X</span>
+            <h1>HỒNG 88</h1>
+            <p>TẶN THƯ THƯỞNG</p>
+            <div class="percentage">110%</div>
+            <p>ĐĂNG KÝ NGAY</p>
+            <button class="register-btn">Đăng Ký</button>
+            <p class="notice">Nhấn để mở tab mới và tiếp tục</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Xử lý popup quảng cáo
+        const overlay = document.getElementById('adOverlay');
+        const closeBtn = document.getElementById('closeAd');
+
+        // Ngăn chặn tương tác với trang cho đến khi đóng popup
+        document.body.style.overflow = 'hidden';
+
+        // Khi nhấp vào nút X hoặc bất kỳ đâu trên popup, mở tab mới và đóng popup
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === closeBtn) {
+                window.open('https://vnshare.cc/g6530015918', '_blank');
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Ngăn chặn tương tác với trang cho đến khi nhấp vào popup
+        document.addEventListener('click', (e) => {
+            if (!overlay.contains(e.target) && overlay.style.display !== 'none') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+
+        // Loại bỏ đoạn đếm ngược không cần thiết vì không có countdownElement
+        // Nếu bạn muốn thêm đếm ngược, hãy thêm phần tử <span id="countdown"></span> vào HTML
+    </script>
+</body>
+</html>
+
+
+
+
+
+
