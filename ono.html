@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Ono Rikka</title>
+    <link rel="icon" type="image/x-icon" href="LOGO.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Áp dụng màu sắc từ trang web mẫu */
+        .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+        .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+        .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+        .border-pink-accent { border-color: #db2777; }
+        .hover\:border-pink-accent:hover { border-color: #db2777; }
+        .hover\:bg-pink-main:hover { background-color: #f472b6; }
+        .hover\:text-pink-main:hover { color: #f472b6; }
+
+        .transition:hover {
+            color: yellow;
+        }
+
+        /* CSS cho popup quảng cáo */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .ad-popup {
+            background: linear-gradient(135deg, #4b0082, #8b008b);
+            border: 5px solid #ffd700;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            color: white;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .ad-popup h1 {
+            font-size: 24px;
+            margin: 0 0 10px;
+            color: #ff69b4;
+        }
+        .ad-popup p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .ad-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ff0000;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .ad-popup .close-btn:hover {
+            color: #ffffff;
+        }
+        .percentage {
+            font-size: 60px;
+            color: #ff69b4;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .register-btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .register-btn:hover {
+            background-color: #ff1493;
+        }
+        .notice {
+            font-size: 12px;
+            color: #ffd700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-pink-light font-sans">
+    <!-- Header -->
+    <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+                    <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+                    <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+                    <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+            <a href="#">
+                <img src="https://cdn.24h.com.vn/upload/2-2021/images/2021-04-27/abe-oto17-1619510800-488-width650height877.jpg" alt="Ono Rikka" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+                <h4 class="text-xl font-semibold mb-2 text-center text-pink-accent">Ono Rikka</h4>
+            </a>
+            <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 14/02/2002</p>
+            <p class="text-gray-600 mb-2"><strong>Thông tin cơ bản:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Nơi sinh: Shiga, Nhật Bản (lớn lên ở Osaka)</li>
+                <li>Chiều cao: 148 cm</li>
+                <li>Số đo 3 vòng: 81 - 58 - 82 cm (năm 2020)</li>
+                <li>Kích thước áo ngực: C</li>
+                <li>Cỡ giày: 23.5 cm</li>
+                <li>Công ty: All Pro</li>
+                <li>Ra mắt phim người lớn: Tháng 5/2020</li>
+            </ul>
+            <p class="text-gray-600 mb-2"><strong>Sự nghiệp:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Ono Rikka (小野六花, Tiểu-Dã Lục-Hoa, sinh ngày 14 tháng 2 năm 2002) là một nữ diễn viên phim người lớn người Nhật Bản thuộc chi nhánh All Pro. Cô ra mắt vào tháng 5/2020 với khẩu hiệu “Ngực và sự dâm dục đang phát triển”, được ca ngợi là “viên kim cương thô” và “bom tấn bùng nổ”. Phim ra mắt của cô dẫn đầu bảng xếp hạng FANZA hàng ngày trong 3 ngày, xếp thứ 5 trong khảo sát Asahi Geino 2020, và cô đứng thứ 4 trong doanh số nữ diễn viên nửa đầu năm 2020 của FANZA, thứ 2 trong hạng mục tân binh mùa hè 2020. Cô xếp thứ 21 trong FLASH 2021, thứ 34 (2022) và 30 (2023) trong bầu cử SEXY của Asahi Geino. Năm 2022, cô biểu diễn ca hát tại Millegen LIVE ở Tokyo. Năm 2023, cô đóng vai Iida Riho trong loạt phim chuyển thể từ manga *Karami Zakari*, với phần đầu tiên dẫn đầu bảng xếp hạng video FANZA.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Ono Rikka lần đầu quan hệ tình dục ở tuổi 17 với một người lớn hơn 2 tuổi, và chỉ có một đối tác trước khi vào ngành. Cô chưa xem phim người lớn cho đến khi ra mắt, biết đến Asuka Kirara qua mạng xã hội. Được săn tìm ở trường trung học, cô chọn ngành phim người lớn vì thấy thú vị, từ chối làm thần tượng ngầm hay người mẫu áo tắm. Cô từng thử giọng làm thần tượng nhưng từ chối vì học hành. Tên diễn “Rikka” nghĩa là “tuyết”.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>Xem thêm: <a href="https://vn.javtiful.com/actress/ono-rikka" target="_blank">Ono Rikka trên JAVtiful</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- Popup Quảng Cáo -->
+    <div class="overlay" id="adOverlay">
+        <div class="ad-popup">
+            <span class="close-btn" id="closeAd">X</span>
+            <h1>HỒNG 88</h1>
+            <p>TẶN THƯ THƯỞNG</p>
+            <div class="percentage">110%</div>
+            <p>ĐĂNG KÝ NGAY</p>
+            <button class="register-btn">Đăng Ký</button>
+            <p class="notice">Nhấn để mở tab mới và tiếp tục</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Xử lý popup quảng cáo
+        const overlay = document.getElementById('adOverlay');
+        const closeBtn = document.getElementById('closeAd');
+
+        // Ngăn chặn tương tác với trang cho đến khi đóng popup
+        document.body.style.overflow = 'hidden';
+
+        // Khi nhấp vào nút X hoặc bất kỳ đâu trên popup, mở tab mới và đóng popup
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === closeBtn) {
+                window.open('https://vnshare.cc/g6530015918', '_blank');
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Ngăn chặn tương tác với trang cho đến khi nhấp vào popup
+        document.addEventListener('click', (e) => {
+            if (!overlay.contains(e.target) && overlay.style.display !== 'none') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+    </script>
+</body>
+</html>
