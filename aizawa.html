@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Diễn Viên - Aizawa Minami</title>
+    <link rel="icon" type="image/x-icon" href="LOGO.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Áp dụng màu sắc từ trang web mẫu */
+        .bg-pink-main { background-color: #f472b6; } /* Màu hồng chính cho header/footer */
+        .bg-pink-light { background-color: #f9a8d4; } /* Màu hồng nhạt cho nền trang */
+        .text-pink-accent { color: #db2777; } /* Màu hồng đậm cho tiêu đề và chữ */
+        .border-pink-accent { border-color: #db2777; }
+        .hover\:border-pink-accent:hover { border-color: #db2777; }
+        .hover\:bg-pink-main:hover { background-color: #f472b6; }
+        .hover\:text-pink-main:hover { color: #f472b6; }
+
+        .transition:hover {
+            color: yellow;
+        }
+
+        /* CSS cho popup quảng cáo */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .ad-popup {
+            background: linear-gradient(135deg, #4b0082, #8b008b);
+            border: 5px solid #ffd700;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            color: white;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .ad-popup h1 {
+            font-size: 24px;
+            margin: 0 0 10px;
+            color: #ff69b4;
+        }
+        .ad-popup p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .ad-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ff0000;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .ad-popup .close-btn:hover {
+            color: #ffffff;
+        }
+        .percentage {
+            font-size: 60px;
+            color: #ff69b4;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .register-btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .register-btn:hover {
+            background-color: #ff1493;
+        }
+        .notice {
+            font-size: 12px;
+            color: #ffd700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-pink-light font-sans">
+    <!-- Header -->
+    <header class="bg-pink-main text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#"><h1 class="text-2xl font-bold">Diễn Viên</h1></a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="trangchu.html" class="p-1 rounded hover:text-pink-light transition">Trang chủ</a></li>
+                    <li><a href="dienvien.html" class="p-1 rounded hover:text-pink-light transition">Diễn viên</a></li>
+                    <li><a href="#about" class="p-1 rounded hover:text-pink-light transition">Giới thiệu</a></li>
+                    <li><a href="#contact" class="p-1 rounded hover:text-pink-light transition">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Actor Details Section -->
+    <section id="actor-details" class="container mx-auto my-8 px-4">
+        <div class="bg-white p-6 rounded-lg shadow-md actor-card hover:shadow-lg hover:border-pink-600 border transition-all">
+            <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/AV%E5%A5%B3%E5%84%AA%E3%83%BB%E7%9B%B8%E6%B2%A2%E3%81%BF%E3%81%AA%E3%81%BF.png/330px-AV%E5%A5%B3%E5%84%AA%E3%83%BB%E7%9B%B8%E6%B2%A2%E3%81%BF%E3%81%AA%E3%81%BF.png" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover actor-image">
+                <h4 class="text-xl font-semibold mb-2 text-center text-pink-accent">Aizawa Minami</h4>
+            </a>
+            <p class="text-gray-600 mb-2"><strong>Ngày sinh:</strong> 14/06/1996</p>
+            <p class="text-gray-600 mb-2"><strong>Thông tin cơ bản:</strong></p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Nơi sinh: Hồng Kông</li>
+                <li>Chiều cao: 155 cm</li>
+                <li>Số đo 3 vòng: 80 - 54 - 82 cm</li>
+                <li>Kích thước áo ngực: D65</li>
+                <li>Công ty: Apricity (trước đây: E-point)</li>
+                <li>Ra mắt phim người lớn: 2016</li>
+                <li>Nghỉ việc: Tháng 6/2023</li>
+            </ul>
+            <p class="text-gray-600 mb-2"><strong>Sự nghiệp:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Aizawa Minami (相沢みなみ, Tương-Trạch Nam, sinh ngày 14 tháng 6 năm 1996) là một cựu nữ diễn viên phim người lớn người Nhật Bản, tốt nghiệp Đại học nữ sinh Seisen. Cô ra mắt ngành phim người lớn năm 2016 ở tuổi 19, được tìm kiếm khi học năm nhất đại học. Ban đầu từ chối vì lo lắng, cô đồng ý vào năm hai và làm việc dưới công ty E-point, sau đó chuyển sang Apricity (2020) sau cái chết của chủ tịch E-point. Cô giấu sự nghiệp khỏi gia đình nghiêm khắc nhưng bị một bạn thân tiết lộ. Minami giành giải Nữ diễn viên xuất sắc nhất tại FANZA Adult Awards (2019) và Đạo diễn khỏa thân tại Asahi Awards (2021). Cô xếp thứ 7 trong FLASH 2020, 17th (2021) và 4th (2022) trong bầu cử SEXY của Asahi Geino, và thứ 7 trong bảng xếp hạng FANZA nửa đầu năm 2023. Cô nghỉ diễn vào ngày 2/6/2023 tại một sự kiện ở Đài Loan, cảm thấy đã hoàn thành sứ mệnh sau cái chết của chủ tịch E-point và dịch COVID.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Đời tư:</strong></p>
+            <p class="text-gray-700 mb-4">
+                Aizawa Minami là một *kikokushijo*, sinh ra ở Hồng Kông, sống ở Mỹ đến đầu tiểu học và trong thời gian học cấp ba. Cô nói tiếng Anh lưu loát nhờ chuyên ngành đại học, dù từng bị đánh giá “tiếng Anh tiểu học” do hạn chế về thuật ngữ. Cô gặp khó khăn khi nói tiếng Nhật sau khi trở về Nhật Bản, nhưng được bố khuyên tin vào bản thân. Sở thích của cô là tự làm phụ kiện thẩm mỹ, thể hiện tư duy khoa học. Tên diễn “Aizawa” được lấy từ cố chủ tịch E-point, người đã giúp cô ra mắt.
+            </p>
+            <p class="text-gray-600 mb-2"><strong>Danh sách phim nổi bật:</strong></p>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>Xem thêm: <a href="https://vn.javtiful.com/actress/aizawa-minami" target="_blank">Aizawa Minami trên JAVtiful</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Diễn Viên AV Nhật Bản. All rights reserved.</p>
+            <p><a href="#about" class="p-1 rounded">Giới thiệu</a> | <a href="#" class="p-1 rounded">Điều khoản</a></p>
+        </div>
+    </footer>
+
+    <!-- Popup Quảng Cáo -->
+    <div class="overlay" id="adOverlay">
+        <div class="ad-popup">
+            <span class="close-btn" id="closeAd">X</span>
+            <h1>HỒNG 88</h1>
+            <p>TẶN THƯ THƯỞNG</p>
+            <div class="percentage">110%</div>
+            <p>ĐĂNG KÝ NGAY</p>
+            <button class="register-btn">Đăng Ký</button>
+            <p class="notice">Nhấn để mở tab mới và tiếp tục</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Xử lý popup quảng cáo
+        const overlay = document.getElementById('adOverlay');
+        const closeBtn = document.getElementById('closeAd');
+
+        // Ngăn chặn tương tác với trang cho đến khi đóng popup
+        document.body.style.overflow = 'hidden';
+
+        // Khi nhấp vào nút X hoặc bất kỳ đâu trên popup, mở tab mới và đóng popup
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === closeBtn) {
+                window.open('https://vnshare.cc/g6530015918', '_blank');
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Ngăn chặn tương tác với trang cho đến khi nhấp vào popup
+        document.addEventListener('click', (e) => {
+            if (!overlay.contains(e.target) && overlay.style.display !== 'none') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+    </script>
+</body>
+</html>
